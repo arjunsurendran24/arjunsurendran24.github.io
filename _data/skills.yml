@@ -1,0 +1,20 @@
+# Skills
+# Machine Learning
+- skill: Machine Learning
+  description: TensorFlow, PyTorch, Pandas, Sci-kit Learn, Numpy, NLTK, R
+
+# Programming Languages
+- skill: Programming Languages
+  description: C, C++, Java, Python, Kotlin, Go, Rust
+
+# Web Development
+- skill: Web Development
+  description: HTML, CSS, Javascript, NodeJS, jQuery
+
+# Signal Processing
+- skill: Signal Processing
+  description: MATLAB, Octave
+
+# Image Processing
+- skill: Image Processing
+  description: PIL, OpenCV

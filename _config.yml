@@ -1,0 +1,55 @@
+# Site settings
+title: "Arjun Surendran"
+description: "Resume for Jekyll and GitHub Pages sites."
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Resume settings
+resume_avatar:                  "true"
+resume_name:                    "Arjun Surendran"
+resume_title:                   "Joining University of Southern California for M.S. in Electrical Engineering from from Jan 2018"
+resume_contact_email:           "asurendr@usc.edu"
+resume_contact_telephone:       "+918113064587"
+resume_contact_address:         "Plavada Thottappattu House, South Vazhakulam P.O, Aluva, Ernakulam, Kerala, India - 683105"
+resume_header_contact_info: "Plavada Thottappattu,Ernakulam,Kerala,India - 683105 | +918113064587 | asurendr@usc.edu"
+resume_header_intro: "<p>Experienced Electrical Engineer with strong data analytical skills with a demonstrated history of working in the transportation/trucking/railroad industry and managing staff to the size of approx 150. Skilled in C++, Python, and Web Development. Strong engineering professional with a Bachelor of Technology (B.Tech.) with Honours focused in Electrical and Electronics Engineering from Mahatma Gandhi University</p>"
+
+# use "yes" to display the email contact button,
+# "no" to display an "I'm not looking for work" message,
+# or remove the resume_looking_for_work option entirely
+# to leave blank
+resume_looking_for_work:        "yes"
+
+# Decide which sections to use
+# comment out to hide
+resume_section_experience:      true
+resume_section_education:       true
+resume_section_projects:        true
+resume_section_skills:          true
+resume_section_recognition:     true
+resume_section_links:           true
+resume_section_associations:    true
+# resume_section_interests:       true
+
+# Resume social links
+# uncomment the options you wish to display, and add your own URL
+resume_social_links:
+  resume_github_url:            "https://github.com/arjunsurendran24"
+  #resume_twitter_url:           "http://twitter.com/jglovier"
+  #resume_dribbble_url:          "https://dribbble.com/jag"
+  resume_facebook_url:          "https://www.facebook.com/arjunsurendran24"
+  resume_linkedin_url:          "https://www.linkedin.com/in/arjunsurendran24/"
+  #resume_instagram_url:         "insert your Instagram URL here"
+  #resume_website_url:           "http://joelglovier.com"
+resume_print_social_links:      true
+
+# Design settings
+resume_theme:                   default
+
+# Note: when editing locally, remember to restart
+# your Jekyll server when you edit this file. Changes
+# to _config.yml are only recognized when the server starts

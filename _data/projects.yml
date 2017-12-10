@@ -1,0 +1,44 @@
+# Projects
+# uncomment the urls if you wish to display them, and add your own URL
+
+# Image Resolution Enhancement
+- project: Resolution Enhancement of Image using Deep Neural Net
+  role: Primary Developer
+  #duration: 2012 &mdash; Present
+  url: "https://drive.google.com/file/d/0B930w1Wk7vvfdHBMZTRxTnJHbWs/view?usp=sharing"
+  description: 54 x 44 px image is converted to 218 x 178 px image (400 %) using Deep Neural Net. Trained on 1,50,000 images. Tested on 40,000 images .
+
+# Denoicing of Documents
+- project: Denoising of Documents using Image Painting with Deep Neural Network
+  role: Primary Developer
+  #duration: 2007 &mdash; Present
+  url: "https://github.com/arjunsurendran24/Denoising-of-Documents"
+  description: Deep Neural Network is used to remove noise from images. The NN is implemented using TensorFlow and the dataset is obtained from Kaggle.
+
+# Web View Forecasting
+- project: Web View Forecasting using Recurrent Neural Networks
+  role: Primary Developer
+  #duration: 2007 &mdash; Present
+  url: "https://github.com/arjunsurendran24/Predicting-Web-View-Using-LSTM"
+  description: Implemented RNN in Python using Keras library
+
+# Finding Duplicates
+- project: Finding Duplicates in Text using NLTK and Gradient Boosting
+  role: Primary Developer
+  #duration: 2007 &mdash; Present
+  url: "https://github.com/arjunsurendran24/Finding-Duplicates-in-Quora-Questions-Using-NLTK-and-Gradient-Boosting"
+  description: Used methods in NLTK for cleaning the text. Prediction is made using Gradient Boosting Classifier from sci-kit learn.
+
+# Digit Recognizer
+- project: Digit Recognizer using Neural Network.
+  role: Primary Developer
+  #duration: 2007 &mdash; Present
+  url: "https://github.com/arjunsurendran24/MNIST-Digit-Recognizer-using-Convolutional-Neural-Network"
+  description: Convolutional Neural Network was trained on 42000 inputs with an accuracy of 99.73% and tested on 28000 inputs with an accuracy of 98.5%.
+
+# LED Lighting and Communication System
+- project: LED Lighting and Communication System
+  role: Group Memeber and Handled programming section
+  #duration: 2007 &mdash; Present
+  #url: "https://github.com/arjunsurendran24/Denoising-of-Documents"
+  description: A new communication system incorporating principles of Power Line Communication and Visible Light Communication for intra-building networks.
