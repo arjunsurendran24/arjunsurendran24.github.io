@@ -11,7 +11,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Arjun Surendran"
-resume_title:                   "Joining University of Southern California for M.S. in Electrical Engineering from Jan 2018 | 2672 Magnolia Avenue, Los Angeles, CA, USA - 90007 | +1 (213)425-5258 | asurendr@usc.edu"
+resume_title:                   "Joining University of Southern California for M.S. in Electrical Engineering from Jan 2018 \n 2672 Magnolia Avenue, Los Angeles, CA, USA - 90007 \n +1 (213)425-5258 \n asurendr@usc.edu"
 resume_contact_email:           "asurendr@usc.edu"
 resume_contact_telephone:       "+1 (213)425-5258"
 resume_contact_address:         "2672 Magnolia Avenue, Los Angeles, CA, USA - 90007"
