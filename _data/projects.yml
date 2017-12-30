@@ -1,12 +1,12 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# Image Resolution Enhancement
-- project: Resolution Enhancement of Image using Deep Neural Net
+# Image Generation
+- project: Image Generation using Generative Adverserial Network
   role: Primary Developer
   #duration: 2012 &mdash; Present
-  url: "https://drive.google.com/file/d/0B930w1Wk7vvfdHBMZTRxTnJHbWs/view?usp=sharing"
-  description: 54 x 44 px image is converted to 218 x 178 px image (400 %) using Deep Neural Net. Trained on 1,50,000 images. Tested on 40,000 images .
+  url: "https://drive.google.com/file/d/1VAV_LpGhFaIzPZ04QS2alpz66Nsp2rcf/view?usp=sharing"
+  description: Generative Adverserial Network implemented in TensorFlow using Improved Wasserstein Algorithm. Trained on MNIST dataset for 100,000 iterations.
 
 # Denoicing of Documents
 - project: Denoising of Documents using Image Painting with Deep Neural Network
@@ -35,6 +35,13 @@
   #duration: 2007 &mdash; Present
   url: "https://github.com/arjunsurendran24/MNIST-Digit-Recognizer-using-Convolutional-Neural-Network"
   description: Convolutional Neural Network was trained on 42000 inputs with an accuracy of 99.73% and tested on 28000 inputs with an accuracy of 98.5%.
+
+# Face Detection
+- project: Face Detection in crowd using OpenCV
+  role: Primary Developer
+  #duration: 2012 &mdash; Present
+  url: "https://github.com/arjunsurendran24/Face-Detection-in-crowd-using-OpenCV"
+  description: Face Detection implemented in Video using Haar Cascade Classifier.
 
 # LED Lighting and Communication System
 - project: LED Lighting and Communication System
