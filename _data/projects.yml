@@ -1,6 +1,13 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
+# Augmented Random Search
+- project: Walking Half-Cheetah using Augmented Random Search
+  role: Primary Developer
+  #duration: 2018 &mdash; Present
+  url: "https://github.com/arjunsurendran24/Augmented-Random-Search"
+  description: Taught Half-Cheetah to walk on its own using Augmented Random Search Algorithm implemented in numpy.
+
 # Image Generation
 - project: Image Generation using Generative Adverserial Network
   role: Primary Developer
