@@ -1,12 +1,22 @@
 # Jobs
 # Springfield Nuclear Power Plant
+- company: University of Southern California
+  position: Research Assistant
+  duration: Mar 2018 &mdash; Present
+  summary: <ul class="resume-item-list">
+            <li>Modified Database Schema for decreasing running time of Queries.</li>
+            <li>Coded script in Python to scrape data from websites using Bing API, and API to access data stored in AWS in DynamoDB</li>
+            <li>Researched and programmed methods for Natural Language Processing such as Text Cleaning, Relevant Content Extraction, Chunking, Tagging and Named Entity Recognition on data scraped using Python.</li>
+            <li>Deployed functions in AWS for Data Collection and Processing </li>
+            <li>Designed and deployed functions to collect training data using Amazon Mechanical Turk</li>
+          </ul>
 - company: Indian Railway
   position: Senior Section Engineer
   duration: Oct 2015 &mdash; Oct 2017
   summary: <ul class="resume-item-list">
-            <li>Managing the periodical overhauling of Electrical Wiring of Railway Carriages.</li>
-            <li>Overseeing the activities in Electrical wing with respect to objectives in ISO 9001, ISO 14001, OHSAS 18001 and ISO 50001 certifications and conducting internal audits for its effective implementation.</li>
-            <li>Analyzing Energy Consumption Data of various sections of Workshop for planning and energy conservation purposes.</li>
+            <li>Analyzed Energy Consumption Data and devised action plans resulting in saving 1.1 million Rupees in electricity cost.</li>
+            <li>Designed and maintained the database to store the PTO register of employees in company.</li>
+            <li>Coordinated certification processes for quality management, environmental safety management, occupational safety management and energy management within the company</li>
           </ul>
 
 # Windmill Crank Operator

@@ -5,11 +5,11 @@
 
 # Programming Languages
 - skill: Programming Languages
-  description: C, C++, Java, Python, Kotlin, Go, Rust
+  description: C, C++, Python
 
 # Web Development
 - skill: Web Development
-  description: HTML, CSS, Javascript, NodeJS, jQuery
+  description: HTML, CSS, Javascript, Restful APIs & Web Services
 
 # Signal Processing
 - skill: Signal Processing
@@ -18,3 +18,11 @@
 # Image Processing
 - skill: Image Processing
   description: PIL, OpenCV
+
+# Cloud
+- skill: Cloud
+  description: AWS, Azure, EC2, DynamoDB, Lambda
+
+# Database
+- skill: Database Management
+  description: SQL
