@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Resume of Arjun Surendran, Software Engineer with expertise in ML frameworks, and ML inference.">
+        content="Professional resume of Arjun Surendran, Software Engineer specializing in AI/ML frameworks, compiler development, and on-device machine learning inference across multiple platforms.">
     <meta name="keywords"
         content="Arjun Surendran, Software Engineer, AI, Machine Learning, ML Frameworks, Resume, Python, C++, TensorFlow, PyTorch, Mojo">
     <meta name="author" content="Arjun Surendran">
@@ -24,7 +24,88 @@
         content="Software Engineer specializing in machine learning frameworks, and ML inference.">
     <meta name="twitter:image" content="assets/images/photo.jpg">
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://arjunsurendran24.github.io/web-resume/resume/">
+
     <title>Arjun Surendran | AI Software Engineer Resume</title>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Arjun Surendran",
+        "jobTitle": "Software Engineer",
+        "description": "Software Engineer with expertise in designing and implementing ML frameworks, model execution, and optimization",
+        "url": "https://arjunsurendran24.github.io/web-resume/",
+        "image": "https://arjunsurendran24.github.io/web-resume/assets/images/photo.jpg",
+        "email": "arjunsurendr@gmail.com",
+        "sameAs": [
+            "https://linkedin.com/in/arjunsurendran24",
+            "https://github.com/arjunsurendran24"
+        ],
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Southern California",
+                "description": "Master of Science in Electrical Engineering"
+            },
+            {
+                "@type": "CollegeOrUniversity", 
+                "name": "Mahatma Gandhi University",
+                "description": "Bachelor of Technology in Electrical & Electronics Engineering"
+            }
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Microsoft"
+        },
+        "knowsAbout": [
+            "Machine Learning",
+            "AI Frameworks", 
+            "Python",
+            "C++",
+            "Mojo",
+            "TensorFlow",
+            "PyTorch",
+            "MLIR"
+        ],
+        "hasOccupation": [
+            {
+                "@type": "Occupation",
+                "name": "Software Engineer",
+                "occupationLocation": {
+                    "@type": "Place",
+                    "name": "Microsoft"
+                },
+                "description": "Working on ML compiler",
+                "startDate": "2024-10"
+            },
+            {
+                "@type": "Occupation", 
+                "name": "Software Engineer - AI frameworks",
+                "occupationLocation": {
+                    "@type": "Place",
+                    "name": "Modular"
+                },
+                "description": "Designed framework APIs for model execution in C, C++, and Python. Developed model compilation and execution pipelines with MLIR, C++, Mojo and Python",
+                "startDate": "2022-05",
+                "endDate": "2024-09"
+            },
+            {
+                "@type": "Occupation",
+                "name": "Software Engineer - On-Device Machine Learning", 
+                "occupationLocation": {
+                    "@type": "Place",
+                    "name": "Adobe"
+                },
+                "description": "Developed unified APIs for On-Device ML Inference in C++ across multiple platforms. Benchmarked and optimized models for faster inference and reduced memory consumption",
+                "startDate": "2020-02",
+                "endDate": "2022-04"
+            }
+        ]
+    }
+    </script>
 
     <!-- Link to external stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -35,41 +116,56 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li> <!-- Link to Home page -->
-                <li><a href="index.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+        <nav aria-label="Main navigation">
+            <!-- Breadcrumb Navigation -->
+            <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../index.html">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </span>
+                <span class="breadcrumb-separator"> &gt; </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Resume</span>
+                    <meta itemprop="position" content="2" />
+                </span>
+            </div>
+            
+            <ul role="menubar">
+                <li role="none"><a href="../index.html" role="menuitem" aria-label="Go to home page"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                <li role="none"><a href="index.html" role="menuitem" aria-label="View resume" aria-current="page"><i class="fas fa-file-alt" aria-hidden="true"></i> Resume</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h1>Arjun Surendran</h1>
+    <main role="main">
+        <section id="about" aria-labelledby="about-heading">
+            <h1 id="about-heading">Arjun Surendran</h1>
             <p>Software Engineer with expertise in designing and implementing ML frameworks, model execution, and
                 optimization. I enjoy working on cutting-edge technologies in AI and ML and have experience working
                 across various platforms like MacOS, Windows, Linux, iOS, and Android.</p>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul class="experience-list">
-                <li>
-                    <strong>Software Engineer</strong> <span>- Microsoft (Oct 2024 - Present)</span>
+        <section id="experience" aria-labelledby="experience-heading" itemscope itemtype="https://schema.org/Person">
+            <h2 id="experience-heading">Experience</h2>
+            <ul class="experience-list" itemprop="worksFor">
+                <li itemscope itemtype="https://schema.org/OrganizationRole">
+                    <h3><strong itemprop="roleName">Software Engineer</strong> <span>- <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Microsoft</span></span> (<time itemprop="startDate" datetime="2024-10">Oct 2024</time> - Present)</span></h3>
                     <ul>
-                        <li>Working on ML compiler.</li>
+                        <li itemprop="description">Working on ML compiler.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Software Engineer - AI frameworks</strong> <span>- Modular (May 2022 - Sept 2024)</span>
+                    <h3><strong>Software Engineer - AI frameworks</strong> <span>- Modular (May 2022 - Sept 2024)</span></h3>
                     <ul>
                         <li>Designed framework APIs for model execution in C, C++, and Python.</li>
                         <li>Developed model compilation and execution pipelines with MLIR, C++, Mojo and Python</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Software Engineer - On-Device Machine Learning</strong> <span>- Adobe (Feb 2020 - Apr
-                        2022)</span>
+                    <h3><strong>Software Engineer - On-Device Machine Learning</strong> <span>- Adobe (Feb 2020 - Apr
+                        2022)</span></h3>
                     <ul>
                         <li>Developed unified APIs for On-Device ML Inference in C++ across multiple platforms (MacOS,
                             Windows, Linux, iOS, and Android).</li>
@@ -78,14 +174,14 @@
                     </ul>
                 </li>
                 <li>
-                    <strong>Software Engineer Intern</strong> <span>- The Mathworks (Sept 2019 - Dec 2019)</span>
+                    <h3><strong>Software Engineer Intern</strong> <span>- The Mathworks (Sept 2019 - Dec 2019)</span></h3>
                     <ul>
                         <li>Performed ML Quantization in C++ to reduce model size by 75% with minimal accuracy loss.
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Software Engineer Intern</strong> <span>- Lyft Inc. (May 2019 - Aug 2019)</span>
+                    <h3><strong>Software Engineer Intern</strong> <span>- Lyft Inc. (May 2019 - Aug 2019)</span></h3>
                     <ul>
                         <li>Applied computer vision techniques for scene understanding and automatic detection.</li>
                     </ul>
@@ -94,8 +190,8 @@
         </section>
 
 
-        <section id="projects">
-            <h2>Projects</h2>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
             <ul>
                 <li><strong>ML Framework Development</strong> - Part of the team that developed a new framework for efficient AI
                     model execution at Modular.</li>
@@ -104,24 +200,39 @@
             </ul>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <p><strong>Master of Science in Electrical Engineering</strong> - University of Southern California (Dec
-                2019)</p>
-            <p><strong>Bachelor of Technology in Electrical & Electronics Engineering</strong> - Mahatma Gandhi
-                University, India (May 2014)</p>
+        <section id="education" aria-labelledby="education-heading" itemscope itemtype="https://schema.org/Person">
+            <h2 id="education-heading">Education</h2>
+            <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <p><strong itemprop="name">Master of Science in Electrical Engineering</strong> - <span itemprop="name">University of Southern California</span> (<time itemprop="foundingDate" datetime="2019-12">Dec 2019</time>)</p>
+            </div>
+            <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <p><strong itemprop="name">Bachelor of Technology in Electrical & Electronics Engineering</strong> - <span itemprop="name">Mahatma Gandhi University, India</span> (<time itemprop="foundingDate" datetime="2014-05">May 2014</time>)</p>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <p><strong> Programming Languages</strong>: Python, C, C++, Mojo</p>
-                <p><strong>Frameworks & Tools</strong>: TensorFlow, PyTorch, CoreML, WinML, ONNXRuntime, Git, MLIR</p>
-            </ul>
+        <section id="skills" aria-labelledby="skills-heading" itemscope itemtype="https://schema.org/Person">
+            <h2 id="skills-heading">Skills</h2>
+            <div>
+                <p><strong>Programming Languages</strong>: 
+                    <span itemprop="knowsAbout">Python</span>, 
+                    <span itemprop="knowsAbout">C</span>, 
+                    <span itemprop="knowsAbout">C++</span>, 
+                    <span itemprop="knowsAbout">Mojo</span>
+                </p>
+                <p><strong>Frameworks & Tools</strong>: 
+                    <span itemprop="knowsAbout">TensorFlow</span>, 
+                    <span itemprop="knowsAbout">PyTorch</span>, 
+                    <span itemprop="knowsAbout">CoreML</span>, 
+                    <span itemprop="knowsAbout">WinML</span>, 
+                    <span itemprop="knowsAbout">ONNXRuntime</span>, 
+                    <span itemprop="knowsAbout">Git</span>, 
+                    <span itemprop="knowsAbout">MLIR</span>
+                </p>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
             <p>
                 <a href="mailto:arjunsurendr@gmail.com">
                     <i class="fas fa-envelope"></i> arjunsurendr@gmail.com
