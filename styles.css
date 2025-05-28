@@ -112,6 +112,43 @@ footer p {
     margin: 0;
 }
 
+/* Blog Section Styles */
+.blog-preview {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.blog-post {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.blog-post h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.blog-post p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.blog-post time {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
     header h1 {

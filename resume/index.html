@@ -230,42 +230,151 @@
 
         <section id="skills" aria-labelledby="skills-heading" itemscope itemtype="https://schema.org/Person">
             <h2 id="skills-heading">Skills</h2>
-            <div>
-                <p><strong>Programming Languages</strong>: 
-                    <span itemprop="knowsAbout">Python</span>, 
-                    <span itemprop="knowsAbout">C</span>, 
-                    <span itemprop="knowsAbout">C++</span>, 
-                    <span itemprop="knowsAbout">Mojo</span>
-                </p>
-                <p><strong>Frameworks & Tools</strong>: 
-                    <span itemprop="knowsAbout">TensorFlow</span>, 
-                    <span itemprop="knowsAbout">PyTorch</span>, 
-                    <span itemprop="knowsAbout">CoreML</span>, 
-                    <span itemprop="knowsAbout">WinML</span>, 
-                    <span itemprop="knowsAbout">ONNXRuntime</span>, 
-                    <span itemprop="knowsAbout">Git</span>, 
-                    <span itemprop="knowsAbout">MLIR</span>
-                </p>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-item">
+                        <span itemprop="knowsAbout">Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="95" aria-label="Python proficiency: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span itemprop="knowsAbout">C++</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90" aria-label="C++ proficiency: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span itemprop="knowsAbout">C</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="85" aria-label="C proficiency: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span itemprop="knowsAbout">Mojo</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="80" aria-label="Mojo proficiency: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>ML Frameworks & Tools</h3>
+                    <div class="skill-item">
+                        <span itemprop="knowsAbout">TensorFlow</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90" aria-label="TensorFlow proficiency: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span itemprop="knowsAbout">PyTorch</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="88" aria-label="PyTorch proficiency: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span itemprop="knowsAbout">MLIR</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="85" aria-label="MLIR proficiency: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span itemprop="knowsAbout">ONNXRuntime</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="85" aria-label="ONNXRuntime proficiency: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <div itemscope itemtype="https://schema.org/FAQPage">
+                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 itemprop="name">What programming languages does Arjun specialize in?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text">Arjun specializes in Python, C++, C, and Mojo for AI/ML development, with extensive experience in frameworks like TensorFlow, PyTorch, and MLIR.</div>
+                    </div>
+                </div>
+                
+                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 itemprop="name">What is Arjun's experience with machine learning frameworks?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text">Arjun has deep experience designing and implementing ML frameworks, working on model execution pipelines, compiler development, and cross-platform inference optimization at companies like Microsoft, Modular, and Adobe.</div>
+                    </div>
+                </div>
+                
+                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 itemprop="name">What platforms has Arjun worked with for ML deployment?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text">Arjun has experience with MacOS, Windows, Linux, iOS, and Android platforms, specializing in on-device ML inference and cross-platform API development.</div>
+                    </div>
+                </div>
+                
+                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 itemprop="name">What is Arjun's educational background?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text">Arjun holds a Master of Science in Electrical Engineering from USC (2019) and a Bachelor of Technology in Electrical & Electronics Engineering from Mahatma Gandhi University (2014).</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="contact" aria-labelledby="contact-heading">
             <h2 id="contact-heading">Contact</h2>
-            <p>
-                <a href="mailto:arjunsurendr@gmail.com">
-                    <i class="fas fa-envelope"></i> arjunsurendr@gmail.com
-                </a>
-            </p>
-            <p>
-                <a href="https://linkedin.com/in/arjunsurendran24" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </p>
-            <p>
-                <a href="https://github.com/arjunsurendran24" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </p>
+            
+            <div class="contact-info">
+                <p>
+                    <a href="mailto:arjunsurendr@gmail.com">
+                        <i class="fas fa-envelope"></i> arjunsurendr@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="https://linkedin.com/in/arjunsurendran24" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </p>
+                <p>
+                    <a href="https://github.com/arjunsurendran24" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required aria-describedby="name-error">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required aria-describedby="subject-error">
+                        <span class="error-message" id="subject-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
         </section>
 
     </main>
@@ -315,6 +424,106 @@
                 body.setAttribute('data-theme', newTheme);
                 updateIcon(newTheme);
             }
+        });
+
+        // Skill bar animations
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progress = entry.target;
+                        const level = progress.getAttribute('data-level');
+                        progress.style.width = level + '%';
+                        observer.unobserve(progress);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Contact form validation
+        function setupContactForm() {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+                
+                let isValid = true;
+
+                // Clear previous errors
+                clearErrors();
+
+                // Validate name
+                if (!name.value.trim()) {
+                    showError('name', 'Name is required');
+                    isValid = false;
+                }
+
+                // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.value.trim()) {
+                    showError('email', 'Email is required');
+                    isValid = false;
+                } else if (!emailRegex.test(email.value)) {
+                    showError('email', 'Please enter a valid email address');
+                    isValid = false;
+                }
+
+                // Validate subject
+                if (!subject.value.trim()) {
+                    showError('subject', 'Subject is required');
+                    isValid = false;
+                }
+
+                // Validate message
+                if (!message.value.trim()) {
+                    showError('message', 'Message is required');
+                    isValid = false;
+                } else if (message.value.trim().length < 10) {
+                    showError('message', 'Message must be at least 10 characters long');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    // Create mailto link
+                    const mailtoLink = `mailto:arjunsurendr@gmail.com?subject=${encodeURIComponent(subject.value)}&body=${encodeURIComponent(`Name: ${name.value}\nEmail: ${email.value}\n\nMessage:\n${message.value}`)}`;
+                    window.location.href = mailtoLink;
+                    
+                    // Show success message
+                    alert('Thank you for your message! Your email client should open now.');
+                    form.reset();
+                }
+            });
+
+            function showError(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const errorElement = document.getElementById(fieldId + '-error');
+                field.classList.add('error');
+                errorElement.textContent = message;
+            }
+
+            function clearErrors() {
+                const errorElements = document.querySelectorAll('.error-message');
+                const fieldElements = document.querySelectorAll('.form-group input, .form-group textarea');
+                
+                errorElements.forEach(el => el.textContent = '');
+                fieldElements.forEach(el => el.classList.remove('error'));
+            }
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            animateSkillBars();
+            setupContactForm();
         });
     </script>
 </body>
