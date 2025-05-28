@@ -233,58 +233,22 @@
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
-                    <div class="skill-item">
-                        <span itemprop="knowsAbout">Python</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="95" aria-label="Python proficiency: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span itemprop="knowsAbout">C++</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="90" aria-label="C++ proficiency: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span itemprop="knowsAbout">C</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="85" aria-label="C proficiency: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span itemprop="knowsAbout">Mojo</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="80" aria-label="Mojo proficiency: 80%"></div>
-                        </div>
-                    </div>
+                    <ul class="skill-list">
+                        <li><span itemprop="knowsAbout">Python</span></li>
+                        <li><span itemprop="knowsAbout">C++</span></li>
+                        <li><span itemprop="knowsAbout">C</span></li>
+                        <li><span itemprop="knowsAbout">Mojo</span></li>
+                    </ul>
                 </div>
                 
                 <div class="skill-category">
                     <h3>ML Frameworks & Tools</h3>
-                    <div class="skill-item">
-                        <span itemprop="knowsAbout">TensorFlow</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="90" aria-label="TensorFlow proficiency: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span itemprop="knowsAbout">PyTorch</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="88" aria-label="PyTorch proficiency: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span itemprop="knowsAbout">MLIR</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="85" aria-label="MLIR proficiency: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span itemprop="knowsAbout">ONNXRuntime</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="85" aria-label="ONNXRuntime proficiency: 85%"></div>
-                        </div>
-                    </div>
+                    <ul class="skill-list">
+                        <li><span itemprop="knowsAbout">TensorFlow</span></li>
+                        <li><span itemprop="knowsAbout">PyTorch</span></li>
+                        <li><span itemprop="knowsAbout">MLIR</span></li>
+                        <li><span itemprop="knowsAbout">ONNXRuntime</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -426,23 +390,6 @@
             }
         });
 
-        // Skill bar animations
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-progress');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const progress = entry.target;
-                        const level = progress.getAttribute('data-level');
-                        progress.style.width = level + '%';
-                        observer.unobserve(progress);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            skillBars.forEach(bar => observer.observe(bar));
-        }
 
         // Contact form validation
         function setupContactForm() {
@@ -522,7 +469,6 @@
 
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            animateSkillBars();
             setupContactForm();
         });
     </script>
