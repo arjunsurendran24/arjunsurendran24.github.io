@@ -108,15 +108,33 @@
     </script>
 
     <!-- Link to external stylesheet -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../resume/styles.css">
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    }, function(err) {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
     <header>
         <nav aria-label="Main navigation">
+            <button id="theme-toggle" aria-label="Toggle dark mode" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer;">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            
             <!-- Breadcrumb Navigation -->
             <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -255,6 +273,50 @@
     <footer>
         <p>© 2024 Arjun Surendran. All rights reserved.</p>
     </footer>
+
+    <!-- Dark Mode Script -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Check for saved theme preference or default to 'light' mode
+        const currentTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        if (currentTheme) {
+            body.setAttribute('data-theme', currentTheme);
+            updateIcon(currentTheme);
+        }
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+                themeToggle.setAttribute('aria-label', 'Switch to light mode');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+            }
+        }
+
+        themeToggle.addEventListener('click', function() {
+            const theme = body.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                body.setAttribute('data-theme', newTheme);
+                updateIcon(newTheme);
+            }
+        });
+    </script>
 </body>
 
 </html>
