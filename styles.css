@@ -13,6 +13,8 @@
     --card-bg: white;
     --shadow: rgba(0, 0, 0, 0.05);
     --border-color: #e9ecef;
+    --accent-color: #0078D4;
+    --muted-text: #555;
 }
 
 [data-theme="dark"] {
@@ -22,6 +24,8 @@
     --card-bg: #2d2d2d;
     --shadow: rgba(0, 0, 0, 0.3);
     --border-color: #404040;
+    --accent-color: #4da6ff;
+    --muted-text: #b0b0b0;
 }
 
 body {
@@ -86,14 +90,14 @@ main {
 
 h2 {
     font-size: 1.75rem;
-    color: #0078D4;
+    color: var(--accent-color);
     margin-bottom: 1rem;
     text-align: center;
 }
 
 p {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--muted-text);
     line-height: 1.8;
     text-align: center;
     max-width: 700px;
