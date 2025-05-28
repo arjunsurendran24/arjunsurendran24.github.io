@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Resume of Arjun Surendran, Software Engineer with expertise in ML frameworks, and ML inference.">
+        content="Professional resume of Arjun Surendran, Software Engineer specializing in AI/ML frameworks, compiler development, and on-device machine learning inference across multiple platforms.">
     <meta name="keywords"
         content="Arjun Surendran, Software Engineer, AI, Machine Learning, ML Frameworks, Resume, Python, C++, TensorFlow, PyTorch, Mojo">
     <meta name="author" content="Arjun Surendran">
@@ -24,52 +24,166 @@
         content="Software Engineer specializing in machine learning frameworks, and ML inference.">
     <meta name="twitter:image" content="assets/images/photo.jpg">
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://arjunsurendran24.github.io/web-resume/resume/">
+
     <title>Arjun Surendran | AI Software Engineer Resume</title>
 
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Arjun Surendran",
+        "jobTitle": "Software Engineer",
+        "description": "Software Engineer with expertise in designing and implementing ML frameworks, model execution, and optimization",
+        "url": "https://arjunsurendran24.github.io/web-resume/",
+        "image": "https://arjunsurendran24.github.io/web-resume/assets/images/photo.jpg",
+        "email": "arjunsurendr@gmail.com",
+        "sameAs": [
+            "https://linkedin.com/in/arjunsurendran24",
+            "https://github.com/arjunsurendran24"
+        ],
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Southern California",
+                "description": "Master of Science in Electrical Engineering"
+            },
+            {
+                "@type": "CollegeOrUniversity", 
+                "name": "Mahatma Gandhi University",
+                "description": "Bachelor of Technology in Electrical & Electronics Engineering"
+            }
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Microsoft"
+        },
+        "knowsAbout": [
+            "Machine Learning",
+            "AI Frameworks", 
+            "Python",
+            "C++",
+            "Mojo",
+            "TensorFlow",
+            "PyTorch",
+            "MLIR"
+        ],
+        "hasOccupation": [
+            {
+                "@type": "Occupation",
+                "name": "Software Engineer",
+                "occupationLocation": {
+                    "@type": "Place",
+                    "name": "Microsoft"
+                },
+                "description": "Working on ML compiler",
+                "startDate": "2024-10"
+            },
+            {
+                "@type": "Occupation", 
+                "name": "Software Engineer - AI frameworks",
+                "occupationLocation": {
+                    "@type": "Place",
+                    "name": "Modular"
+                },
+                "description": "Designed framework APIs for model execution in C, C++, and Python. Developed model compilation and execution pipelines with MLIR, C++, Mojo and Python",
+                "startDate": "2022-05",
+                "endDate": "2024-09"
+            },
+            {
+                "@type": "Occupation",
+                "name": "Software Engineer - On-Device Machine Learning", 
+                "occupationLocation": {
+                    "@type": "Place",
+                    "name": "Adobe"
+                },
+                "description": "Developed unified APIs for On-Device ML Inference in C++ across multiple platforms. Benchmarked and optimized models for faster inference and reduced memory consumption",
+                "startDate": "2020-02",
+                "endDate": "2022-04"
+            }
+        ]
+    }
+    </script>
+
     <!-- Link to external stylesheet -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../resume/styles.css">
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    }, function(err) {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li> <!-- Link to Home page -->
-                <li><a href="index.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+        <nav aria-label="Main navigation">
+            <button id="theme-toggle" aria-label="Toggle dark mode" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer;">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            
+            <!-- Breadcrumb Navigation -->
+            <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../index.html">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </span>
+                <span class="breadcrumb-separator"> &gt; </span>
+                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Resume</span>
+                    <meta itemprop="position" content="2" />
+                </span>
+            </div>
+            
+            <ul role="menubar">
+                <li role="none"><a href="../index.html" role="menuitem" aria-label="Go to home page"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                <li role="none"><a href="index.html" role="menuitem" aria-label="View resume" aria-current="page"><i class="fas fa-file-alt" aria-hidden="true"></i> Resume</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h1>Arjun Surendran</h1>
+    <main role="main">
+        <section id="about" aria-labelledby="about-heading">
+            <h1 id="about-heading">Arjun Surendran</h1>
             <p>Software Engineer with expertise in designing and implementing ML frameworks, model execution, and
                 optimization. I enjoy working on cutting-edge technologies in AI and ML and have experience working
                 across various platforms like MacOS, Windows, Linux, iOS, and Android.</p>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul class="experience-list">
-                <li>
-                    <strong>Software Engineer</strong> <span>- Microsoft (Oct 2024 - Present)</span>
+        <section id="experience" aria-labelledby="experience-heading" itemscope itemtype="https://schema.org/Person">
+            <h2 id="experience-heading">Experience</h2>
+            <ul class="experience-list" itemprop="worksFor">
+                <li itemscope itemtype="https://schema.org/OrganizationRole">
+                    <h3><strong itemprop="roleName">Software Engineer</strong> <span>- <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Microsoft</span></span> (<time itemprop="startDate" datetime="2024-10">Oct 2024</time> - Present)</span></h3>
                     <ul>
-                        <li>Working on ML compiler.</li>
+                        <li itemprop="description">Working on ML compiler.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Software Engineer - AI frameworks</strong> <span>- Modular (May 2022 - Sept 2024)</span>
+                    <h3><strong>Software Engineer - AI frameworks</strong> <span>- Modular (May 2022 - Sept 2024)</span></h3>
                     <ul>
                         <li>Designed framework APIs for model execution in C, C++, and Python.</li>
                         <li>Developed model compilation and execution pipelines with MLIR, C++, Mojo and Python</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Software Engineer - On-Device Machine Learning</strong> <span>- Adobe (Feb 2020 - Apr
-                        2022)</span>
+                    <h3><strong>Software Engineer - On-Device Machine Learning</strong> <span>- Adobe (Feb 2020 - Apr
+                        2022)</span></h3>
                     <ul>
                         <li>Developed unified APIs for On-Device ML Inference in C++ across multiple platforms (MacOS,
                             Windows, Linux, iOS, and Android).</li>
@@ -78,14 +192,14 @@
                     </ul>
                 </li>
                 <li>
-                    <strong>Software Engineer Intern</strong> <span>- The Mathworks (Sept 2019 - Dec 2019)</span>
+                    <h3><strong>Software Engineer Intern</strong> <span>- The Mathworks (Sept 2019 - Dec 2019)</span></h3>
                     <ul>
                         <li>Performed ML Quantization in C++ to reduce model size by 75% with minimal accuracy loss.
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Software Engineer Intern</strong> <span>- Lyft Inc. (May 2019 - Aug 2019)</span>
+                    <h3><strong>Software Engineer Intern</strong> <span>- Lyft Inc. (May 2019 - Aug 2019)</span></h3>
                     <ul>
                         <li>Applied computer vision techniques for scene understanding and automatic detection.</li>
                     </ul>
@@ -94,8 +208,8 @@
         </section>
 
 
-        <section id="projects">
-            <h2>Projects</h2>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
             <ul>
                 <li><strong>ML Framework Development</strong> - Part of the team that developed a new framework for efficient AI
                     model execution at Modular.</li>
@@ -104,39 +218,127 @@
             </ul>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <p><strong>Master of Science in Electrical Engineering</strong> - University of Southern California (Dec
-                2019)</p>
-            <p><strong>Bachelor of Technology in Electrical & Electronics Engineering</strong> - Mahatma Gandhi
-                University, India (May 2014)</p>
+        <section id="education" aria-labelledby="education-heading" itemscope itemtype="https://schema.org/Person">
+            <h2 id="education-heading">Education</h2>
+            <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <p><strong itemprop="name">Master of Science in Electrical Engineering</strong> - <span itemprop="name">University of Southern California</span> (<time itemprop="foundingDate" datetime="2019-12">Dec 2019</time>)</p>
+            </div>
+            <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <p><strong itemprop="name">Bachelor of Technology in Electrical & Electronics Engineering</strong> - <span itemprop="name">Mahatma Gandhi University, India</span> (<time itemprop="foundingDate" datetime="2014-05">May 2014</time>)</p>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <p><strong> Programming Languages</strong>: Python, C, C++, Mojo</p>
-                <p><strong>Frameworks & Tools</strong>: TensorFlow, PyTorch, CoreML, WinML, ONNXRuntime, Git, MLIR</p>
-            </ul>
+        <section id="skills" aria-labelledby="skills-heading" itemscope itemtype="https://schema.org/Person">
+            <h2 id="skills-heading">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li><span itemprop="knowsAbout">Python</span></li>
+                        <li><span itemprop="knowsAbout">C++</span></li>
+                        <li><span itemprop="knowsAbout">C</span></li>
+                        <li><span itemprop="knowsAbout">Mojo</span></li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>ML Frameworks & Tools</h3>
+                    <ul class="skill-list">
+                        <li><span itemprop="knowsAbout">TensorFlow</span></li>
+                        <li><span itemprop="knowsAbout">PyTorch</span></li>
+                        <li><span itemprop="knowsAbout">MLIR</span></li>
+                        <li><span itemprop="knowsAbout">ONNXRuntime</span></li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                <a href="mailto:arjunsurendr@gmail.com">
-                    <i class="fas fa-envelope"></i> arjunsurendr@gmail.com
-                </a>
-            </p>
-            <p>
-                <a href="https://linkedin.com/in/arjunsurendran24" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </p>
-            <p>
-                <a href="https://github.com/arjunsurendran24" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </p>
+        <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <div itemscope itemtype="https://schema.org/FAQPage">
+                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 itemprop="name">What programming languages does Arjun specialize in?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text">Arjun specializes in Python, C++, C, and Mojo for AI/ML development, with extensive experience in frameworks like TensorFlow, PyTorch, and MLIR.</div>
+                    </div>
+                </div>
+                
+                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 itemprop="name">What is Arjun's experience with machine learning frameworks?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text">Arjun has deep experience designing and implementing ML frameworks, working on model execution pipelines, compiler development, and cross-platform inference optimization at companies like Microsoft, Modular, and Adobe.</div>
+                    </div>
+                </div>
+                
+                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 itemprop="name">What platforms has Arjun worked with for ML deployment?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text">Arjun has experience with MacOS, Windows, Linux, iOS, and Android platforms, specializing in on-device ML inference and cross-platform API development.</div>
+                    </div>
+                </div>
+                
+                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 itemprop="name">What is Arjun's educational background?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text">Arjun holds a Master of Science in Electrical Engineering from USC (2019) and a Bachelor of Technology in Electrical & Electronics Engineering from Mahatma Gandhi University (2014).</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            
+            <div class="contact-info">
+                <p>
+                    <a href="mailto:arjunsurendr@gmail.com">
+                        <i class="fas fa-envelope"></i> arjunsurendr@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="https://linkedin.com/in/arjunsurendran24" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </p>
+                <p>
+                    <a href="https://github.com/arjunsurendran24" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required aria-describedby="name-error">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required aria-describedby="subject-error">
+                        <span class="error-message" id="subject-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
         </section>
 
     </main>
@@ -144,6 +346,132 @@
     <footer>
         <p>© 2024 Arjun Surendran. All rights reserved.</p>
     </footer>
+
+    <!-- Dark Mode Script -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Check for saved theme preference or default to 'light' mode
+        const currentTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        if (currentTheme) {
+            body.setAttribute('data-theme', currentTheme);
+            updateIcon(currentTheme);
+        }
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+                themeToggle.setAttribute('aria-label', 'Switch to light mode');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+            }
+        }
+
+        themeToggle.addEventListener('click', function() {
+            const theme = body.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                body.setAttribute('data-theme', newTheme);
+                updateIcon(newTheme);
+            }
+        });
+
+
+        // Contact form validation
+        function setupContactForm() {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+                
+                let isValid = true;
+
+                // Clear previous errors
+                clearErrors();
+
+                // Validate name
+                if (!name.value.trim()) {
+                    showError('name', 'Name is required');
+                    isValid = false;
+                }
+
+                // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.value.trim()) {
+                    showError('email', 'Email is required');
+                    isValid = false;
+                } else if (!emailRegex.test(email.value)) {
+                    showError('email', 'Please enter a valid email address');
+                    isValid = false;
+                }
+
+                // Validate subject
+                if (!subject.value.trim()) {
+                    showError('subject', 'Subject is required');
+                    isValid = false;
+                }
+
+                // Validate message
+                if (!message.value.trim()) {
+                    showError('message', 'Message is required');
+                    isValid = false;
+                } else if (message.value.trim().length < 10) {
+                    showError('message', 'Message must be at least 10 characters long');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    // Create mailto link
+                    const mailtoLink = `mailto:arjunsurendr@gmail.com?subject=${encodeURIComponent(subject.value)}&body=${encodeURIComponent(`Name: ${name.value}\nEmail: ${email.value}\n\nMessage:\n${message.value}`)}`;
+                    window.location.href = mailtoLink;
+                    
+                    // Show success message
+                    alert('Thank you for your message! Your email client should open now.');
+                    form.reset();
+                }
+            });
+
+            function showError(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const errorElement = document.getElementById(fieldId + '-error');
+                field.classList.add('error');
+                errorElement.textContent = message;
+            }
+
+            function clearErrors() {
+                const errorElements = document.querySelectorAll('.error-message');
+                const fieldElements = document.querySelectorAll('.form-group input, .form-group textarea');
+                
+                errorElements.forEach(el => el.textContent = '');
+                fieldElements.forEach(el => el.classList.remove('error'));
+            }
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            setupContactForm();
+        });
+    </script>
 </body>
 
 </html>

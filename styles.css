@@ -5,23 +5,49 @@
     box-sizing: border-box;
 }
 
+/* CSS Variables for theming */
+:root {
+    --bg-color: #f4f7fa;
+    --text-color: #333;
+    --header-bg: #0078D4;
+    --card-bg: white;
+    --shadow: rgba(0, 0, 0, 0.05);
+    --border-color: #e9ecef;
+    --accent-color: #0078D4;
+    --muted-text: #555;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --header-bg: #0066cc;
+    --card-bg: #2d2d2d;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --border-color: #404040;
+    --accent-color: #4da6ff;
+    --muted-text: #b0b0b0;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f7fa;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-behavior: smooth;
 }
 
 header {
-    background-color: #0078D4;
+    background-color: var(--header-bg);
     color: white;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--shadow);
+    position: relative;
 }
 
 header h1 {
@@ -57,21 +83,21 @@ main {
     padding: 3rem 2rem;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 12px var(--shadow);
 }
 
 h2 {
     font-size: 1.75rem;
-    color: #0078D4;
+    color: var(--accent-color);
     margin-bottom: 1rem;
     text-align: center;
 }
 
 p {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--muted-text);
     line-height: 1.8;
     text-align: center;
     max-width: 700px;
@@ -89,6 +115,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 /* Responsiveness */
 @media (max-width: 768px) {
