@@ -12,10 +12,12 @@
     --text-color: #1a202c;
     --text-secondary: #4a5568;
     --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --card-border: rgba(255, 255, 255, 0.2);
-    --shadow: rgba(0, 0, 0, 0.1);
-    --shadow-hover: rgba(0, 0, 0, 0.2);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(102, 126, 234, 0.15);
+    --card-inner-bg: rgba(255, 255, 255, 0.7);
+    --card-inner-border: rgba(102, 126, 234, 0.2);
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
     --accent-color: #667eea;
     --accent-secondary: #764ba2;
     --success-color: #48bb78;
@@ -31,6 +33,8 @@
     --header-bg: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
     --card-bg: rgba(45, 55, 72, 0.8);
     --card-border: rgba(255, 255, 255, 0.1);
+    --card-inner-bg: rgba(45, 55, 72, 0.6);
+    --card-inner-border: rgba(255, 255, 255, 0.15);
     --shadow: rgba(0, 0, 0, 0.3);
     --shadow-hover: rgba(0, 0, 0, 0.5);
     --accent-color: #90cdf4;
@@ -243,10 +247,12 @@ ul.experience-list li {
     margin-bottom: 3rem;
     position: relative;
     padding-left: 3rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-inner-bg);
+    backdrop-filter: var(--blur);
     border-radius: 12px;
     padding: 2rem 2rem 2rem 3rem;
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--card-inner-border);
+    box-shadow: 0 8px 32px var(--shadow);
     transition: all 0.3s ease;
 }
 
@@ -265,7 +271,8 @@ ul.experience-list li::before {
 
 ul.experience-list li:hover {
     transform: translateX(10px);
-    box-shadow: 0 10px 25px var(--shadow-hover);
+    box-shadow: 0 12px 40px var(--shadow-hover);
+    border-color: var(--accent-color);
 }
 
 ul.experience-list ul {
@@ -324,16 +331,19 @@ ul.experience-list li span {
 }
 
 .skill-category {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-inner-bg);
+    backdrop-filter: var(--blur);
     border-radius: 12px;
     padding: 2rem;
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--card-inner-border);
+    box-shadow: 0 8px 32px var(--shadow);
     transition: all 0.3s ease;
 }
 
 .skill-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px var(--shadow-hover);
+    box-shadow: 0 15px 40px var(--shadow-hover);
+    border-color: var(--accent-color);
 }
 
 .skill-category h3 {
@@ -420,9 +430,11 @@ ul.experience-list li span {
     align-items: center;
     gap: 0.75rem;
     padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-inner-bg);
+    backdrop-filter: var(--blur);
     border-radius: 12px;
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--card-inner-border);
+    box-shadow: 0 4px 16px var(--shadow);
     font-size: 1.1rem;
 }
 
@@ -430,7 +442,7 @@ ul.experience-list li span {
     color: var(--accent-secondary);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px var(--shadow-hover);
-    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
 }
 
 .contact-info i {

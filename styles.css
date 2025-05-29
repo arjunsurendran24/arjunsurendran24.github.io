@@ -12,10 +12,10 @@
     --text-color: #1a202c;
     --text-secondary: #4a5568;
     --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --card-border: rgba(255, 255, 255, 0.2);
-    --shadow: rgba(0, 0, 0, 0.1);
-    --shadow-hover: rgba(0, 0, 0, 0.2);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(102, 126, 234, 0.15);
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
     --accent-color: #667eea;
     --accent-secondary: #764ba2;
     --border-radius: 16px;
