@@ -113,6 +113,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Additional print styles to remove headers/footers -->
+    <style>
+        @media print {
+            @page {
+                margin: 0.4in 0.3in;
+                size: letter;
+            }
+            html, body {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+        }
+    </style>
+    
     <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
