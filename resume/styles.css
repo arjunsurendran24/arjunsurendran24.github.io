@@ -582,9 +582,9 @@ footer p {
         background: white !important;
         color: black !important;
         font-family: 'Times New Roman', serif !important;
-        font-size: 12pt !important;
-        line-height: 1.4 !important;
-        margin: 0 !important;
+        font-size: 11pt !important;
+        line-height: 1.3 !important;
+        margin: 0.5in !important;
         padding: 0 !important;
     }
 
@@ -594,13 +594,7 @@ footer p {
     }
 
     header {
-        background: none !important;
-        box-shadow: none !important;
-        border-bottom: 2px solid black !important;
-        padding: 0 !important;
-        margin-bottom: 0.5in !important;
-        position: static !important;
-        page-break-inside: avoid !important;
+        display: none !important;
     }
 
     .breadcrumb,
@@ -623,8 +617,8 @@ footer p {
         box-shadow: none !important;
         border: none !important;
         border-radius: 0 !important;
-        padding: 0 0 0.3in 0 !important;
-        margin-bottom: 0.2in !important;
+        padding: 0 !important;
+        margin-bottom: 0.15in !important;
         page-break-inside: avoid !important;
         backdrop-filter: none !important;
     }
@@ -636,30 +630,33 @@ footer p {
     /* Header with name and contact */
     #about {
         text-align: center !important;
-        border-bottom: 1px solid black !important;
-        padding-bottom: 0.2in !important;
-        margin-bottom: 0.3in !important;
+        border-bottom: 2px solid black !important;
+        padding-bottom: 0.1in !important;
+        margin-bottom: 0.2in !important;
     }
 
     h1 {
-        font-size: 24pt !important;
+        font-size: 20pt !important;
         font-weight: bold !important;
-        margin: 0 0 0.1in 0 !important;
+        margin: 0 0 0.05in 0 !important;
         color: black !important;
         background: none !important;
         -webkit-background-clip: unset !important;
         -webkit-text-fill-color: unset !important;
         text-align: center !important;
+        letter-spacing: 1pt !important;
     }
 
     h2 {
-        font-size: 14pt !important;
+        font-size: 12pt !important;
         font-weight: bold !important;
         color: black !important;
-        margin: 0.2in 0 0.1in 0 !important;
+        margin: 0.15in 0 0.08in 0 !important;
         border-bottom: 1px solid black !important;
-        padding-bottom: 2pt !important;
+        padding-bottom: 1pt !important;
         text-align: left !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5pt !important;
     }
 
     h2::after {
@@ -667,40 +664,39 @@ footer p {
     }
 
     h3 {
-        font-size: 12pt !important;
+        font-size: 11pt !important;
         font-weight: bold !important;
         color: black !important;
-        margin: 0.1in 0 0.05in 0 !important;
+        margin: 0.08in 0 0.03in 0 !important;
     }
 
     p {
-        margin: 0.05in 0 !important;
+        margin: 0.03in 0 !important;
         color: black !important;
-        font-size: 12pt !important;
+        font-size: 11pt !important;
         text-align: left !important;
     }
 
     /* Contact info in header */
     #about p {
         text-align: center !important;
-        font-size: 11pt !important;
-        margin: 0.05in 0 !important;
+        font-size: 10pt !important;
+        margin: 0.03in 0 !important;
     }
 
     /* Show print contact info when printing */
     .print-contact {
         display: block !important;
         text-align: center !important;
-        margin: 0.1in 0 !important;
+        margin: 0.05in 0 !important;
         padding: 0 !important;
-        border-bottom: 1px solid #ccc !important;
-        padding-bottom: 0.1in !important;
     }
 
     .print-contact p {
-        font-size: 10pt !important;
+        font-size: 9pt !important;
         font-weight: normal !important;
         margin: 0 !important;
+        color: #333 !important;
     }
 
     /* Experience section */
@@ -719,7 +715,7 @@ footer p {
         border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
-        margin-bottom: 0.15in !important;
+        margin-bottom: 0.1in !important;
         page-break-inside: avoid !important;
         backdrop-filter: none !important;
     }
@@ -731,24 +727,25 @@ footer p {
     ul.experience-list li strong {
         font-weight: bold !important;
         color: black !important;
-        font-size: 12pt !important;
+        font-size: 11pt !important;
     }
 
     ul.experience-list li span {
         color: black !important;
         font-weight: normal !important;
-        font-size: 11pt !important;
+        font-size: 10pt !important;
+        font-style: italic !important;
     }
 
     ul.experience-list ul {
-        margin: 0.05in 0 0 0.2in !important;
+        margin: 0.03in 0 0 0.15in !important;
         padding: 0 !important;
     }
 
     ul.experience-list ul li {
-        margin-bottom: 0.03in !important;
+        margin-bottom: 0.02in !important;
         padding: 0 !important;
-        font-size: 11pt !important;
+        font-size: 10pt !important;
         list-style-type: disc !important;
         list-style-position: outside !important;
     }
@@ -761,7 +758,7 @@ footer p {
     .skills-container {
         display: block !important;
         columns: 2 !important;
-        column-gap: 0.3in !important;
+        column-gap: 0.2in !important;
         break-inside: avoid !important;
     }
 
@@ -770,18 +767,17 @@ footer p {
         border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
-        margin-bottom: 0.15in !important;
+        margin-bottom: 0.08in !important;
         break-inside: avoid !important;
         backdrop-filter: none !important;
     }
 
     .skill-category h3 {
-        font-size: 11pt !important;
+        font-size: 10pt !important;
         font-weight: bold !important;
         color: black !important;
-        margin-bottom: 0.05in !important;
-        border-bottom: 1px solid black !important;
-        padding-bottom: 1pt !important;
+        margin-bottom: 0.03in !important;
+        text-decoration: underline !important;
     }
 
     .skill-category h3::after {
@@ -790,7 +786,7 @@ footer p {
 
     .skill-list {
         margin: 0 !important;
-        padding: 0 !important;
+        padding: 0 0 0 0.1in !important;
     }
 
     .skill-list li {
@@ -798,10 +794,18 @@ footer p {
         border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
-        margin-bottom: 0.02in !important;
-        font-size: 10pt !important;
-        list-style-type: disc !important;
-        list-style-position: inside !important;
+        margin-bottom: 0.01in !important;
+        font-size: 9pt !important;
+        list-style-type: none !important;
+        display: inline !important;
+    }
+
+    .skill-list li::after {
+        content: ", " !important;
+    }
+
+    .skill-list li:last-child::after {
+        content: "" !important;
     }
 
     .skill-list li::before {
@@ -813,55 +817,30 @@ footer p {
         font-weight: normal !important;
     }
 
-    /* Contact section */
+    /* Hide contact section in print */
     #contact {
-        page-break-inside: avoid !important;
-    }
-
-    .contact-info {
-        display: block !important;
-        text-align: center !important;
-    }
-
-    .contact-info p {
-        display: inline-block !important;
-        margin: 0 0.1in !important;
-        font-size: 10pt !important;
-    }
-
-    .contact-info a {
-        color: black !important;
-        text-decoration: none !important;
-        background: none !important;
-        border: none !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-        font-weight: normal !important;
-        backdrop-filter: none !important;
-    }
-
-    .contact-info i {
         display: none !important;
     }
 
     /* Education section */
     #education div {
-        margin-bottom: 0.1in !important;
+        margin-bottom: 0.05in !important;
     }
 
     #education p {
-        margin: 0.05in 0 !important;
+        margin: 0.02in 0 !important;
+        font-size: 10pt !important;
     }
 
     /* Projects section */
     #projects ul {
-        margin: 0 0 0 0.2in !important;
+        margin: 0 0 0 0.15in !important;
         padding: 0 !important;
     }
 
     #projects li {
-        font-size: 11pt !important;
-        margin-bottom: 0.05in !important;
+        font-size: 10pt !important;
+        margin-bottom: 0.02in !important;
         list-style-type: disc !important;
         list-style-position: outside !important;
     }
@@ -871,18 +850,8 @@ footer p {
         display: none !important;
     }
 
-    /* Footer */
+    /* Hide footer in print */
     footer {
-        background: none !important;
-        color: black !important;
-        border-top: 1px solid black !important;
-        padding: 0.1in 0 !important;
-        margin-top: 0.3in !important;
-        text-align: center !important;
-        font-size: 9pt !important;
-    }
-
-    footer::before {
         display: none !important;
     }
 
