@@ -618,7 +618,7 @@ footer p {
         border: none !important;
         border-radius: 0 !important;
         padding: 0 !important;
-        margin-bottom: 0.15in !important;
+        margin-bottom: 0.08in !important;
         page-break-inside: avoid !important;
         backdrop-filter: none !important;
     }
@@ -648,10 +648,10 @@ footer p {
     }
 
     h2 {
-        font-size: 12pt !important;
+        font-size: 11pt !important;
         font-weight: bold !important;
         color: black !important;
-        margin: 0.15in 0 0.08in 0 !important;
+        margin: 0.1in 0 0.05in 0 !important;
         border-bottom: 1px solid black !important;
         padding-bottom: 1pt !important;
         text-align: left !important;
@@ -715,7 +715,7 @@ footer p {
         border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
-        margin-bottom: 0.1in !important;
+        margin-bottom: 0.08in !important;
         page-break-inside: avoid !important;
         backdrop-filter: none !important;
     }
@@ -724,28 +724,41 @@ footer p {
         display: none !important;
     }
 
+    ul.experience-list li h3 {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+        margin: 0 !important;
+        font-size: 10pt !important;
+        font-weight: bold !important;
+        color: black !important;
+    }
+
     ul.experience-list li strong {
         font-weight: bold !important;
         color: black !important;
-        font-size: 11pt !important;
+        font-size: 10pt !important;
+        flex-grow: 1 !important;
     }
 
     ul.experience-list li span {
         color: black !important;
         font-weight: normal !important;
-        font-size: 10pt !important;
+        font-size: 9pt !important;
         font-style: italic !important;
+        text-align: right !important;
+        white-space: nowrap !important;
     }
 
     ul.experience-list ul {
-        margin: 0.03in 0 0 0.15in !important;
+        margin: 0.02in 0 0 0.15in !important;
         padding: 0 !important;
     }
 
     ul.experience-list ul li {
-        margin-bottom: 0.02in !important;
+        margin-bottom: 0.01in !important;
         padding: 0 !important;
-        font-size: 10pt !important;
+        font-size: 9pt !important;
         list-style-type: disc !important;
         list-style-position: outside !important;
     }
