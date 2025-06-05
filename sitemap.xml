@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Homepage -->
     <url>
-        <loc>https://arjunsurendran24.github.io/web-resume/</loc>
+        <loc>https://arjunsurendran.dev/</loc>
         <lastmod>2024-12-27</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://arjunsurendran.dev/assets/images/photo.jpg</image:loc>
+            <image:title>Arjun Surendran - Software Engineer</image:title>
+            <image:caption>Professional headshot of Arjun Surendran, Software Engineer specializing in machine learning</image:caption>
+        </image:image>
     </url>
+    
+    <!-- Resume Page -->
     <url>
-        <loc>https://arjunsurendran24.github.io/web-resume/resume/</loc>
+        <loc>https://arjunsurendran.dev/resume/</loc>
         <lastmod>2024-12-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://arjunsurendran.dev/assets/images/photo.jpg</image:loc>
+            <image:title>Arjun Surendran Resume</image:title>
+            <image:caption>Professional resume of Arjun Surendran showcasing experience in ML frameworks and AI development</image:caption>
+        </image:image>
     </url>
+    
+    <!-- 404 Page (for completeness) -->
+    <url>
+        <loc>https://arjunsurendran.dev/404.html</loc>
+        <lastmod>2024-12-27</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    
 </urlset>

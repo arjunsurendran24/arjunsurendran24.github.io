@@ -1,0 +1,87 @@
+# GitHub Pages Configuration
+title: "Arjun Surendran - Software Engineer Portfolio"
+description: "Professional portfolio and resume of Arjun Surendran, Software Engineer specializing in machine learning frameworks and AI development"
+url: "https://arjunsurendran.dev"
+baseurl: ""
+
+# Site metadata
+author:
+  name: "Arjun Surendran"
+  email: "arjunsurendr@gmail.com"
+  bio: "Software Engineer with expertise in machine learning frameworks, AI development, and systems engineering"
+  location: "Seattle, WA"
+  linkedin: "arjunsurendran24"
+  github: "arjunsurendran24"
+
+# SEO and social media
+logo: "/assets/images/photo.jpg"
+social:
+  name: "Arjun Surendran"
+  links:
+    - "https://linkedin.com/in/arjunsurendran24"
+    - "https://github.com/arjunsurendran24"
+
+# GitHub Pages settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: America/Los_Angeles
+
+# GitHub Pages optimization
+compress_html:
+  clippings: all
+  comments: all
+  endings: html
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+# Collections and defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "Arjun Surendran"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - CLAUDE.md
+  - .gitignore
+  - .git/
+  - node_modules/
+  - package*.json
+
+# Include in processing
+include:
+  - .htaccess
+  - _pages
+  - assets/
+
+# Site verification
+google_site_verification: ""
+bing_site_verification: ""
+
+# Analytics (when needed)
+google_analytics: ""
+
+# Performance optimizations
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Security
+safe: true
+whitelist:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
