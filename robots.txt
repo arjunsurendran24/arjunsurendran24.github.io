@@ -32,10 +32,10 @@ Allow: /
 Crawl-delay: 3
 
 # Sitemap location
-Sitemap: https://arjunsurendran24.github.io/web-resume/sitemap.xml
+Sitemap: https://arjunsurendran.dev/sitemap.xml
 
 # Host (canonical URL)
-Host: https://arjunsurendran24.github.io
+Host: https://arjunsurendran.dev
 
 # Clean URLs preference
 Clean-param: utm_source&utm_medium&utm_campaign

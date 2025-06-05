@@ -1,8 +1,8 @@
 # GitHub Pages Configuration
 title: "Arjun Surendran - Software Engineer Portfolio"
 description: "Professional portfolio and resume of Arjun Surendran, Software Engineer specializing in machine learning frameworks and AI development"
-url: "https://arjunsurendran24.github.io"
-baseurl: "/web-resume"
+url: "https://arjunsurendran.dev"
+baseurl: ""
 
 # Site metadata
 author:
