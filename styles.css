@@ -293,13 +293,10 @@ nav ul li a[aria-current="page"] {
 main {
     flex-grow: 1;
     padding: 4rem 2rem;
-    width: 100%;
-    max-width: none;
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
-    display: flex;
-    justify-content: center;
 }
 
 #about {
@@ -314,9 +311,6 @@ main {
     overflow: hidden;
     animation: fadeInUp 1s ease-out 0.4s both;
     transition: var(--transition);
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 #about:hover {
