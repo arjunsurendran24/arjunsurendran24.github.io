@@ -292,7 +292,7 @@ nav ul li a[aria-current="page"] {
 /* Main content styling */
 main {
     flex-grow: 1;
-    padding: 4rem 2rem;
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
@@ -301,16 +301,12 @@ main {
 
 #about {
     background: var(--card-bg);
-    backdrop-filter: var(--blur);
     border-radius: var(--border-radius);
     border: 1px solid var(--card-border);
     box-shadow: 0 20px 40px var(--shadow);
-    padding: var(--spacing-lg);
+    padding: 3rem;
     text-align: center;
     position: relative;
-    overflow: hidden;
-    animation: fadeInUp 1s ease-out 0.4s both;
-    transition: var(--transition);
 }
 
 #about:hover {
@@ -392,6 +388,8 @@ p {
     text-align: center;
     margin: 0 0 var(--spacing-md) 0;
     font-weight: 400;
+    width: 100% !important;
+    max-width: none !important;
 }
 
 /* Skip link for accessibility */
@@ -428,7 +426,8 @@ p {
 
 /* Enhanced content styling */
 .intro-content {
-    width: 100%;
+    width: 100% !important;
+    max-width: none !important;
 }
 
 .highlight-text {
