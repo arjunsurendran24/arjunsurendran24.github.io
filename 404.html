@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Arjun Surendran Portfolio">
+    <meta name="robots" content="noindex">
+    <title>404 - Page Not Found | Arjun Surendran</title>
+    <link rel="canonical" href="https://arjunsurendran24.github.io/web-resume/404">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <button id="theme-toggle" aria-label="Toggle dark mode" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer;">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            <ul role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" aria-label="Go to home page"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                <li role="none"><a href="resume/index.html" role="menuitem" aria-label="View resume"><i class="fas fa-file-alt" aria-hidden="true"></i> Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="about" aria-labelledby="error-heading">
+            <h1 id="error-heading">404 - Page Not Found</h1>
+            <div class="intro-content">
+                <p>
+                    Oops! The page you're looking for doesn't exist. 
+                    It might have been moved, deleted, or you entered the wrong URL.
+                </p>
+                <p class="highlight-text">
+                    Let's get you back on track with my portfolio and resume.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="index.html" class="cta-primary" aria-label="Go to homepage">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        Go Home
+                    </a>
+                    <a href="resume/index.html" class="cta-secondary" aria-label="View resume">
+                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        View Resume
+                    </a>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/arjunsurendran24" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   aria-label="Connect on LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+                <a href="https://github.com/arjunsurendran24" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   aria-label="View GitHub profile">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span class="sr-only">GitHub</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Arjun Surendran. All rights reserved.</p>
+    </footer>
+
+    <!-- Dark Mode Script -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Check for saved theme preference or default to 'light' mode
+        const currentTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        if (currentTheme) {
+            body.setAttribute('data-theme', currentTheme);
+            updateIcon(currentTheme);
+        }
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+                themeToggle.setAttribute('aria-label', 'Switch to light mode');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+            }
+        }
+
+        themeToggle.addEventListener('click', function() {
+            const theme = body.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                body.setAttribute('data-theme', newTheme);
+                updateIcon(newTheme);
+            }
+        });
+    </script>
+</body>
+</html>

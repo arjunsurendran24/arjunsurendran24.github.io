@@ -1,8 +1,41 @@
+# Robots.txt for Arjun Surendran Portfolio
+# Optimized for search engine visibility
+
 User-agent: *
 Allow: /
+Allow: /resume/
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.svg
 
-# Sitemap
+# Disallow unnecessary files
+Disallow: /CLAUDE.md
+Disallow: /.git/
+Disallow: /_config.yml
+Disallow: /CNAME
+
+# Special instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 3
+
+# Sitemap location
 Sitemap: https://arjunsurendran24.github.io/web-resume/sitemap.xml
 
-# Allow search engines to crawl all content
-Disallow:
+# Host (canonical URL)
+Host: https://arjunsurendran24.github.io
+
+# Clean URLs preference
+Clean-param: utm_source&utm_medium&utm_campaign
