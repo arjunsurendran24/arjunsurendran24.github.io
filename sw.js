@@ -1,4 +1,4 @@
-const CACHE_NAME = 'arjun-portfolio-v2.0.0';
+const CACHE_NAME = 'arjun-portfolio-v2.1.0';
 const OFFLINE_URL = '/offline.html';
 
 // Critical resources to cache immediately
@@ -7,8 +7,8 @@ const CRITICAL_CACHE = [
   '/index.html',
   '/resume/',
   '/resume/index.html',
-  '/styles.css',
-  '/resume/styles.css',
+  '/styles.css?v=2.0',
+  '/resume/styles.css?v=2.0',
   '/404.html',
   '/assets/images/photo.jpg'
 ];
