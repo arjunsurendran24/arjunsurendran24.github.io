@@ -1,16 +1,17 @@
-const CACHE_NAME = 'arjun-portfolio-v2.1.0';
-const OFFLINE_URL = '/offline.html';
+const CACHE_NAME = 'arjun-portfolio-v2.2.0';
+const OFFLINE_URL = '/web-resume/404.html';
 
 // Critical resources to cache immediately
 const CRITICAL_CACHE = [
-  '/',
-  '/index.html',
-  '/resume/',
-  '/resume/index.html',
-  '/styles.css?v=2.0',
-  '/resume/styles.css?v=2.0',
-  '/404.html',
-  '/assets/images/photo.jpg'
+  '/web-resume/',
+  '/web-resume/index.html',
+  '/web-resume/resume/',
+  '/web-resume/resume/index.html',
+  '/web-resume/styles.css?v=2.1',
+  '/web-resume/resume/styles.css?v=2.1',
+  '/web-resume/js/theme-toggle.js',
+  '/web-resume/404.html',
+  '/web-resume/assets/images/photo.jpg'
 ];
 
 // External resources to cache

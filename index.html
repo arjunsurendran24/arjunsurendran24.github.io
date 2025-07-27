@@ -11,9 +11,14 @@
     <meta name="googlebot" content="index, follow">
     <meta name="theme-color" content="#667eea">
     <meta name="color-scheme" content="light dark">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
     
     <!-- Open Graph Protocol -->
     <meta property="og:type" content="website">
@@ -150,9 +155,24 @@
     }
     </script>
     
-    <link rel="stylesheet" href="styles.css?v=2.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Critical CSS -->
+    <style>
+        /* Critical above-the-fold styles */
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        header { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 2rem 1rem; }
+        h1 { font-size: 2.5rem; margin: 0; color: white; }
+        .intro-content { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px); border-radius: 20px; padding: 2rem; margin: 2rem 0; }
+    </style>
+    
+    <!-- Performance Optimizations -->
+    <link rel="preload" href="styles.css?v=2.1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css?v=2.1"></noscript>
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"></noscript>
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
@@ -172,19 +192,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     
-    <!-- Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                        console.log('ServiceWorker registration successful');
-                    }, function(err) {
-                        console.log('ServiceWorker registration failed: ', err);
-                    });
-            });
-        }
-    </script>
+    <!-- Module Preload for better performance -->
+    <link rel="modulepreload" href="js/theme-toggle.js">
 </head>
 
 <body>
@@ -201,6 +210,9 @@
     </header>
 
     <main role="main" itemscope itemtype="https://schema.org/Person">
+        <!-- Skip to main content link for accessibility -->
+        <a href="#about" class="skip-link" tabindex="1">Skip to main content</a>
+        
         <section id="about" aria-labelledby="about-heading">
             <h1 id="about-heading" itemprop="name">About Arjun Surendran</h1>
             <div class="intro-content">
@@ -260,49 +272,8 @@
         <p>© 2024 Arjun Surendran. All rights reserved.</p>
     </footer>
 
-    <!-- Dark Mode Script -->
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const body = document.body;
-
-        // Check for saved theme preference or default to 'light' mode
-        const currentTheme = localStorage.getItem('theme') || 
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-        if (currentTheme) {
-            body.setAttribute('data-theme', currentTheme);
-            updateIcon(currentTheme);
-        }
-
-        function updateIcon(theme) {
-            if (theme === 'dark') {
-                themeIcon.className = 'fas fa-sun';
-                themeToggle.setAttribute('aria-label', 'Switch to light mode');
-            } else {
-                themeIcon.className = 'fas fa-moon';
-                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
-            }
-        }
-
-        themeToggle.addEventListener('click', function() {
-            const theme = body.getAttribute('data-theme');
-            const newTheme = theme === 'dark' ? 'light' : 'dark';
-            
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateIcon(newTheme);
-        });
-
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            if (!localStorage.getItem('theme')) {
-                const newTheme = e.matches ? 'dark' : 'light';
-                body.setAttribute('data-theme', newTheme);
-                updateIcon(newTheme);
-            }
-        });
-    </script>
+    <!-- Modern JavaScript Module -->
+    <script type="module" src="js/theme-toggle.js"></script>
 </body>
 
 </html>
