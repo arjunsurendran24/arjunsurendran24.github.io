@@ -1,12 +1,43 @@
+/* Modern CSS Architecture with Layers */
+@layer reset, base, components, utilities, animations;
+
+/* CSS Container Queries Support */
+@container-type: inline-size;
+
 /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@layer reset {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Skip link for accessibility */
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: var(--accent-color);
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 1001;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: top 0.3s ease;
+    }
+    
+    .skip-link:focus {
+        top: 6px;
+    }
 }
 
 /* CSS Variables for theming */
+@layer base {
 :root {
+    /* Modern CSS Custom Properties with fallbacks */
+    --animation-duration: 0.4s;
+    --transition-duration: 0.3s;
     --bg-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --bg-animated: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
     --bg-solid: #f8fafc;
