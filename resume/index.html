@@ -11,7 +11,7 @@
     <meta name="author" content="Arjun Surendran">
     
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -115,254 +115,296 @@
     }
     </script>
 
-    <!-- Critical CSS -->
-    <style>
-        /* Critical above-the-fold styles */
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-        header { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 2rem 1rem; }
-        h1 { font-size: 2.5rem; margin: 0; color: white; text-align: center; }
-        section { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px); border-radius: 20px; padding: 2rem; margin: 2rem; }
-    </style>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
-    <!-- Performance Optimizations -->
-    <link rel="preload" href="styles.css?v=2.1" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css?v=2.1"></noscript>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
     
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+    <!-- Print CSS -->
+    <link rel="stylesheet" href="../css/print.css" media="print">
     
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="../manifest.json">
-    
-    <!-- Apple PWA meta tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Arjun Portfolio">
-    <link rel="apple-touch-icon" href="../assets/images/icon-180.png">
-    
-    <!-- Microsoft PWA meta tags -->
-    <meta name="msapplication-TileColor" content="#667eea">
-    <meta name="msapplication-config" content="../browserconfig.xml">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
-    
-    <!-- Additional print styles to remove headers/footers -->
-    <style>
-        @media print {
-            @page {
-                margin: 0.4in 0.3in;
-                size: letter;
-            }
-            html, body {
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
-            }
-        }
-    </style>
-    
-    <!-- Module Preload for better performance -->
-    <link rel="modulepreload" href="../js/theme-toggle.js">
 </head>
 
-<body>
+<body class="">
     <header>
-        <nav aria-label="Main navigation">
-            <button id="theme-toggle" aria-label="Toggle dark mode" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer;">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
-            
-            <!-- Breadcrumb Navigation -->
-            <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../index.html">
-                        <span itemprop="name">Home</span>
-                    </a>
-                    <meta itemprop="position" content="1" />
-                </span>
-                <span class="breadcrumb-separator"> &gt; </span>
-                <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">Resume</span>
-                    <meta itemprop="position" content="2" />
-                </span>
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Arjun Surendran</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="btn nav-link border-0" aria-label="Toggle dark mode">
+                                <i class="fas fa-moon" id="theme-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <ul role="menubar">
-                <li role="none"><a href="../index.html" role="menuitem" aria-label="Go to home page"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
-                <li role="none"><a href="index.html" role="menuitem" aria-label="View resume" aria-current="page"><i class="fas fa-file-alt" aria-hidden="true"></i> Resume</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main role="main">
-        <!-- Skip to main content link for accessibility -->
-        <a href="#about" class="skip-link" tabindex="1">Skip to main content</a>
+    <main role="main" class="container my-5 pt-5">
         
-        <section id="about" aria-labelledby="about-heading">
-            <h1 id="about-heading">Arjun Surendran</h1>
-            <div class="print-contact">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mt-4 d-print-none">
+            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="../index.html"><span itemprop="name">Home</span></a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Resume</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </nav>
+        
+        <section id="about" aria-labelledby="about-heading" class="mb-5 text-center">
+            <h1 id="about-heading" class="display-4 fw-bold mb-3">Arjun Surendran</h1>
+            <div class="print-contact d-none d-print-block">
                 <p>Email: arjunsurendr@gmail.com | LinkedIn: linkedin.com/in/arjunsurendran24 | GitHub: github.com/arjunsurendran24</p>
             </div>
-            <p>Software Engineer with expertise in designing and implementing ML frameworks, model execution, and
+            <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                Software Engineer with expertise in designing and implementing ML frameworks, model execution, and
                 optimization. I enjoy working on cutting-edge technologies in AI and ML and have experience working
-                across various platforms like MacOS, Windows, Linux, iOS, and Android.</p>
+                across various platforms like MacOS, Windows, Linux, iOS, and Android.
+            </p>
         </section>
 
-        <section id="experience" aria-labelledby="experience-heading" itemscope itemtype="https://schema.org/Person">
-            <h2 id="experience-heading">Experience</h2>
-            <ul class="experience-list" itemprop="worksFor">
-                <li itemscope itemtype="https://schema.org/OrganizationRole">
-                    <h3><strong itemprop="roleName">Software Engineer</strong><span><span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Microsoft</span></span> | <time itemprop="startDate" datetime="2024-10">Oct 2024</time> - Present</span></h3>
-                    <ul>
-                        <li itemprop="description">Working on ML compiler.</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3><strong>Software Engineer - AI frameworks</strong><span>Modular | May 2022 - Sept 2024</span></h3>
-                    <ul>
-                        <li>Designed framework APIs for model execution in C, C++, and Python.</li>
-                        <li>Developed model compilation and execution pipelines with MLIR, C++, Mojo and Python</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3><strong>Software Engineer - On-Device Machine Learning</strong><span>Adobe | Feb 2020 - Apr 2022</span></h3>
-                    <ul>
-                        <li>Developed unified APIs for On-Device ML Inference in C++ across multiple platforms (MacOS,
-                            Windows, Linux, iOS, and Android).</li>
-                        <li>Benchmarked and optimized models for faster inference and reduced memory consumption.</li>
-                        <li>Deployed models over the air using On-Demand Model Download APIs.</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3><strong>Software Engineer Intern</strong><span>The Mathworks | Sept 2019 - Dec 2019</span></h3>
-                    <ul>
-                        <li>Performed ML Quantization in C++ to reduce model size by 75% with minimal accuracy loss.
+        <div class="row">
+            <div class="col-lg-8">
+                <section id="experience" class="mb-5" aria-labelledby="experience-heading" itemscope itemtype="https://schema.org/Person">
+                    <h2 id="experience-heading" class="mb-4 border-bottom pb-2">Experience</h2>
+                    <div class="experience-list" itemprop="worksFor">
+                        
+                        <div class="experience-item" itemscope itemtype="https://schema.org/OrganizationRole">
+                            <h3 class="h5 fw-bold mb-1">
+                                <span itemprop="roleName">Software Engineer</span>
+                            </h3>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-primary fw-semibold" itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+                                    <span itemprop="name">Microsoft</span>
+                                </span>
+                                <time itemprop="startDate" datetime="2024-10" class="text-muted small">Oct 2024 - Present</time>
+                            </div>
+                            <ul>
+                                <li itemprop="description">Working on ML compiler.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3 class="h5 fw-bold mb-1">Software Engineer - AI frameworks</h3>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-primary fw-semibold">Modular</span>
+                                <span class="text-muted small">May 2022 - Sept 2024</span>
+                            </div>
+                            <ul>
+                                <li>Designed framework APIs for model execution in C, C++, and Python.</li>
+                                <li>Developed model compilation and execution pipelines with MLIR, C++, Mojo and Python</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3 class="h5 fw-bold mb-1">Software Engineer - On-Device Machine Learning</h3>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-primary fw-semibold">Adobe</span>
+                                <span class="text-muted small">Feb 2020 - Apr 2022</span>
+                            </div>
+                            <ul>
+                                <li>Developed unified APIs for On-Device ML Inference in C++ across multiple platforms (MacOS,
+                                    Windows, Linux, iOS, and Android).</li>
+                                <li>Benchmarked and optimized models for faster inference and reduced memory consumption.</li>
+                                <li>Deployed models over the air using On-Demand Model Download APIs.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3 class="h5 fw-bold mb-1">Software Engineer Intern</h3>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-primary fw-semibold">The Mathworks</span>
+                                <span class="text-muted small">Sept 2019 - Dec 2019</span>
+                            </div>
+                            <ul>
+                                <li>Performed ML Quantization in C++ to reduce model size by 75% with minimal accuracy loss.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <h3 class="h5 fw-bold mb-1">Software Engineer Intern</h3>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="text-primary fw-semibold">Lyft Inc.</span>
+                                <span class="text-muted small">May 2019 - Aug 2019</span>
+                            </div>
+                            <ul>
+                                <li>Applied computer vision techniques for scene understanding and automatic detection.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects" class="mb-5" aria-labelledby="projects-heading">
+                    <h2 id="projects-heading" class="mb-4 border-bottom pb-2">Projects</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong>ML Framework Development</strong> - Part of the team that developed a new framework for efficient AI
+                            model execution at Modular.
+                        </li>
+                        <li class="mb-3">
+                            <strong>On-Device ML Inference</strong> - Developed APIs and tools for machine learning inference
+                            across multiple platforms at Adobe.
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <h3><strong>Software Engineer Intern</strong><span>Lyft Inc. | May 2019 - Aug 2019</span></h3>
-                    <ul>
-                        <li>Applied computer vision techniques for scene understanding and automatic detection.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-
-        <section id="projects" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Projects</h2>
-            <ul>
-                <li><strong>ML Framework Development</strong> - Part of the team that developed a new framework for efficient AI
-                    model execution at Modular.</li>
-                <li><strong>On-Device ML Inference</strong> - Developed APIs and tools for machine learning inference
-                    across multiple platforms at Adobe.</li>
-            </ul>
-        </section>
-
-        <section id="education" aria-labelledby="education-heading" itemscope itemtype="https://schema.org/Person">
-            <h2 id="education-heading">Education</h2>
-            <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
-                <p><strong itemprop="name">Master of Science in Electrical Engineering</strong> - <span itemprop="name">University of Southern California</span> (<time itemprop="foundingDate" datetime="2019-12">Dec 2019</time>)</p>
+                </section>
             </div>
-            <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
-                <p><strong itemprop="name">Bachelor of Technology in Electrical & Electronics Engineering</strong> - <span itemprop="name">Mahatma Gandhi University, India</span> (<time itemprop="foundingDate" datetime="2014-05">May 2014</time>)</p>
-            </div>
-        </section>
 
-        <section id="skills" aria-labelledby="skills-heading" itemscope itemtype="https://schema.org/Person">
-            <h2 id="skills-heading">Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul class="skill-list">
-                        <li><span itemprop="knowsAbout">Python</span></li>
-                        <li><span itemprop="knowsAbout">C++</span></li>
-                        <li><span itemprop="knowsAbout">C</span></li>
-                        <li><span itemprop="knowsAbout">Mojo</span></li>
-                    </ul>
-                </div>
+            <div class="col-lg-4">
+                <section id="skills" class="mb-5" aria-labelledby="skills-heading" itemscope itemtype="https://schema.org/Person">
+                    <h2 id="skills-heading" class="mb-4 border-bottom pb-2">Skills</h2>
+                    
+                    <div class="card card-custom mb-4 p-3">
+                        <h3 class="h6 text-muted text-uppercase mb-3 fw-bold">Programming Languages</h3>
+                        <div>
+                            <span class="skills-badge" itemprop="knowsAbout">Python</span>
+                            <span class="skills-badge" itemprop="knowsAbout">C++</span>
+                            <span class="skills-badge" itemprop="knowsAbout">C</span>
+                            <span class="skills-badge" itemprop="knowsAbout">Mojo</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-custom mb-4 p-3">
+                        <h3 class="h6 text-muted text-uppercase mb-3 fw-bold">ML Frameworks & Tools</h3>
+                        <div>
+                            <span class="skills-badge" itemprop="knowsAbout">TensorFlow</span>
+                            <span class="skills-badge" itemprop="knowsAbout">PyTorch</span>
+                            <span class="skills-badge" itemprop="knowsAbout">MLIR</span>
+                            <span class="skills-badge" itemprop="knowsAbout">ONNXRuntime</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="education" class="mb-5" aria-labelledby="education-heading" itemscope itemtype="https://schema.org/Person">
+                    <h2 id="education-heading" class="mb-4 border-bottom pb-2">Education</h2>
+                    
+                    <div class="mb-4" itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                        <h3 class="h6 fw-bold mb-1" itemprop="name">University of Southern California</h3>
+                        <p class="mb-0 small text-muted">Master of Science in Electrical Engineering</p>
+                        <time itemprop="foundingDate" datetime="2019-12" class="small text-muted">Dec 2019</time>
+                    </div>
+                    
+                    <div class="mb-4" itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                        <h3 class="h6 fw-bold mb-1" itemprop="name">Mahatma Gandhi University, India</h3>
+                        <p class="mb-0 small text-muted">Bachelor of Technology in Electrical & Electronics Engineering</p>
+                        <time itemprop="foundingDate" datetime="2014-05" class="small text-muted">May 2014</time>
+                    </div>
+                </section>
                 
-                <div class="skill-category">
-                    <h3>ML Frameworks & Tools</h3>
-                    <ul class="skill-list">
-                        <li><span itemprop="knowsAbout">TensorFlow</span></li>
-                        <li><span itemprop="knowsAbout">PyTorch</span></li>
-                        <li><span itemprop="knowsAbout">MLIR</span></li>
-                        <li><span itemprop="knowsAbout">ONNXRuntime</span></li>
-                    </ul>
-                </div>
+                <section id="contact-info" class="mb-5 d-print-none">
+                     <h2 class="mb-4 border-bottom pb-2">Connect</h2>
+                     <div class="card card-custom p-3">
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-2"><a href="mailto:arjunsurendr@gmail.com" class="text-decoration-none"><i class="fas fa-envelope me-2 text-primary"></i> arjunsurendr@gmail.com</a></li>
+                            <li class="mb-2"><a href="https://linkedin.com/in/arjunsurendran24" target="_blank" class="text-decoration-none"><i class="fab fa-linkedin me-2 text-primary"></i> LinkedIn</a></li>
+                            <li class="mb-2"><a href="https://github.com/arjunsurendran24" target="_blank" class="text-decoration-none"><i class="fab fa-github me-2 text-primary"></i> GitHub</a></li>
+                        </ul>
+                     </div>
+                </section>
             </div>
-        </section>
+        </div>
 
-        <section id="faq" aria-labelledby="faq-heading">
-            <h2 id="faq-heading">Frequently Asked Questions</h2>
-            <div itemscope itemtype="https://schema.org/FAQPage">
-                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
-                    <h3 itemprop="name">What programming languages does Arjun specialize in?</h3>
-                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                        <div itemprop="text">Arjun specializes in Python, C++, C, and Mojo for AI/ML development, with extensive experience in frameworks like TensorFlow, PyTorch, and MLIR.</div>
+        <section id="faq" class="mb-5 d-print-none" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" class="mb-4 border-bottom pb-2">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="accordion-item" itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <span itemprop="name">What programming languages does Arjun specialize in?</span>
+                        </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div class="accordion-body" itemprop="text">
+                            Arjun specializes in Python, C++, C, and Mojo for AI/ML development, with extensive experience in frameworks like TensorFlow, PyTorch, and MLIR.
+                        </div>
                     </div>
                 </div>
                 
-                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
-                    <h3 itemprop="name">What is Arjun's experience with machine learning frameworks?</h3>
-                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                        <div itemprop="text">Arjun has deep experience designing and implementing ML frameworks, working on model execution pipelines, compiler development, and cross-platform inference optimization at companies like Microsoft, Modular, and Adobe.</div>
+                <div class="accordion-item" itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span itemprop="name">What is Arjun's experience with machine learning frameworks?</span>
+                        </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div class="accordion-body" itemprop="text">
+                            Arjun has deep experience designing and implementing ML frameworks, working on model execution pipelines, compiler development, and cross-platform inference optimization at companies like Microsoft, Modular, and Adobe.
+                        </div>
                     </div>
                 </div>
                 
-                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
-                    <h3 itemprop="name">What platforms has Arjun worked with for ML deployment?</h3>
-                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                        <div itemprop="text">Arjun has experience with MacOS, Windows, Linux, iOS, and Android platforms, specializing in on-device ML inference and cross-platform API development.</div>
+                <div class="accordion-item" itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span itemprop="name">What platforms has Arjun worked with for ML deployment?</span>
+                        </button>
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div class="accordion-body" itemprop="text">
+                            Arjun has experience with MacOS, Windows, Linux, iOS, and Android platforms, specializing in on-device ML inference and cross-platform API development.
+                        </div>
                     </div>
                 </div>
                 
-                <div itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
-                    <h3 itemprop="name">What is Arjun's educational background?</h3>
-                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                        <div itemprop="text">Arjun holds a Master of Science in Electrical Engineering from USC (2019) and a Bachelor of Technology in Electrical & Electronics Engineering from Mahatma Gandhi University (2014).</div>
+                <div class="accordion-item" itemscope itemtype="https://schema.org/Question" itemprop="mainEntity">
+                    <h3 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <span itemprop="name">What is Arjun's educational background?</span>
+                        </button>
+                    </h3>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div class="accordion-body" itemprop="text">
+                            Arjun holds a Master of Science in Electrical Engineering from USC (2019) and a Bachelor of Technology in Electrical & Electronics Engineering from Mahatma Gandhi University (2014).
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="contact" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Contact</h2>
-            
-            <div class="contact-info">
-                <p>
-                    <a href="mailto:arjunsurendr@gmail.com">
-                        <i class="fas fa-envelope"></i> arjunsurendr@gmail.com
-                    </a>
-                </p>
-                <p>
-                    <a href="https://linkedin.com/in/arjunsurendran24" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </p>
-                <p>
-                    <a href="https://github.com/arjunsurendran24" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </p>
-            </div>
-
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2024 Arjun Surendran. All rights reserved.</p>
+    <footer class="text-center py-4 border-top d-print-none">
+        <div class="container">
+            <p class="mb-0 text-muted">© 2025 Arjun Surendran. All rights reserved.</p>
+        </div>
     </footer>
 
-    <!-- Modern JavaScript Module -->
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Theme Toggle Script -->
     <script type="module" src="../js/theme-toggle.js"></script>
 </body>
 
