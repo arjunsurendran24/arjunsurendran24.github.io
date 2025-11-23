@@ -7,7 +7,7 @@ class ThemeToggle {
     constructor() {
         this.themeToggle = document.getElementById('theme-toggle');
         this.themeIcon = document.getElementById('theme-icon');
-        this.body = document.body;
+        this.html = document.documentElement;
         this.prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
         
         this.init();
@@ -23,7 +23,7 @@ class ThemeToggle {
     }
 
     setTheme(theme) {
-        this.body.setAttribute('data-theme', theme);
+        this.html.setAttribute('data-bs-theme', theme);
         this.updateIcon(theme);
     }
 
@@ -38,7 +38,7 @@ class ThemeToggle {
     }
 
     toggleTheme() {
-        const currentTheme = this.body.getAttribute('data-theme');
+        const currentTheme = this.html.getAttribute('data-bs-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
         this.setTheme(newTheme);

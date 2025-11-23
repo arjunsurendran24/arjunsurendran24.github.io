@@ -10,10 +10,9 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
     <meta name="theme-color" content="#667eea">
-    <meta name="color-scheme" content="light dark">
     
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -52,13 +51,22 @@
     <link rel="alternate" hreflang="en" href="https://arjunsurendran.dev/">
     <link rel="alternate" hreflang="x-default" href="https://arjunsurendran.dev/">
     
-    <!-- DNS prefetch for performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
-    <!-- Preconnect for critical resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
     
     <title>Arjun Surendran - Software Engineer Portfolio</title>
     
@@ -138,141 +146,123 @@
                 "copyrightHolder": {
                     "@id": "https://arjunsurendran.dev/#person"
                 }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://arjunsurendran.dev/#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://arjunsurendran.dev/"
-                    }
-                ]
             }
         ]
     }
     </script>
-    
-    <!-- Critical CSS -->
-    <style>
-        /* Critical above-the-fold styles */
-        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-        header { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 2rem 1rem; }
-        h1 { font-size: 2.5rem; margin: 0; color: white; }
-        .intro-content { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px); border-radius: 20px; padding: 2rem; margin: 2rem 0; }
-    </style>
-    
-    <!-- Performance Optimizations -->
-    <link rel="preload" href="styles.css?v=2.1" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css?v=2.1"></noscript>
-    
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"></noscript>
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- Apple PWA meta tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Arjun Portfolio">
-    <link rel="apple-touch-icon" href="assets/images/icon-180.png">
-    
-    <!-- Microsoft PWA meta tags -->
-    <meta name="msapplication-TileColor" content="#667eea">
-    <meta name="msapplication-config" content="browserconfig.xml">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    
-    <!-- Module Preload for better performance -->
-    <link rel="modulepreload" href="js/theme-toggle.js">
 </head>
 
 <body>
     <header>
-        <nav aria-label="Main navigation">
-            <button id="theme-toggle" aria-label="Toggle dark mode" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer;">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </button>
-            <ul role="menubar">
-                <li role="none"><a href="index.html" role="menuitem" aria-label="Go to home page" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
-                <li role="none"><a href="resume/index.html" role="menuitem" aria-label="View resume"><i class="fas fa-file-alt" aria-hidden="true"></i> Resume</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Arjun Surendran</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resume/index.html">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="theme-toggle" class="btn nav-link border-0" aria-label="Toggle dark mode">
+                                <i class="fas fa-moon" id="theme-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main role="main" itemscope itemtype="https://schema.org/Person">
-        <!-- Skip to main content link for accessibility -->
-        <a href="#about" class="skip-link" tabindex="1">Skip to main content</a>
-        
-        <section id="about" aria-labelledby="about-heading">
-            <h1 id="about-heading" itemprop="name">About Arjun Surendran</h1>
-            <div class="intro-content">
-                <p itemprop="description">
-                    Hi, I'm <span itemprop="givenName">Arjun</span> <span itemprop="familyName">Surendran</span>, 
-                    a <span itemprop="jobTitle">Software Engineer</span> with a passion for 
-                    <span itemprop="knowsAbout">machine learning</span> and 
-                    <span itemprop="knowsAbout">systems engineering</span>.
-                </p>
-                <p class="highlight-text">
-                    Currently working at <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
-                        <span itemprop="name">Microsoft</span>
-                    </span> on ML compiler technologies, with expertise in 
-                    <span itemprop="knowsAbout">AI frameworks</span>, 
-                    <span itemprop="knowsAbout">Python</span>, 
-                    <span itemprop="knowsAbout">C++</span>, and 
-                    <span itemprop="knowsAbout">Mojo</span>.
-                </p>
-                
-                <!-- CTA buttons -->
-                <div class="cta-buttons">
-                    <a href="resume/index.html" class="cta-primary" aria-label="View detailed resume">
-                        <i class="fas fa-file-alt" aria-hidden="true"></i>
-                        View Resume
-                    </a>
-                    <a href="mailto:arjunsurendr@gmail.com" class="cta-secondary" itemprop="email" aria-label="Send email to Arjun">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        Get in Touch
-                    </a>
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto text-center" itemscope itemtype="https://schema.org/Person">
+                        <h1 class="hero-title mb-4">
+                            Hello, I'm <span itemprop="name">Arjun Surendran</span>
+                        </h1>
+
+                        <p class="mb-5">
+                            Software Engineer with expertise in <span itemprop="knowsAbout">C++</span>, <span itemprop="knowsAbout">Python</span>, <span itemprop="knowsAbout">MLIR</span> and <span itemprop="knowsAbout">Graph Compilers</span>.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="resume/index.html" class="btn btn-primary-custom">
+                                <i class="fas fa-file-alt me-2"></i> View Resume
+                            </a>
+                            <a href="#contact" class="btn btn-outline-custom">
+                                <i class="fas fa-envelope me-2"></i> Get in Touch
+                            </a>
+                        </div>
+                        
+                        <div class="mt-5 social-links">
+                            <a href="https://linkedin.com/in/arjunsurendran24" target="_blank" rel="noopener noreferrer" class="fs-2 me-4 hover-primary" style="color: var(--text-color)">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/arjunsurendran24" target="_blank" rel="noopener noreferrer" class="fs-2 hover-primary" style="color: var(--text-color)">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Social links with structured data -->
-            <div class="social-links" itemscope itemtype="https://schema.org/Person">
-                <a href="https://linkedin.com/in/arjunsurendran24" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   itemprop="sameAs"
-                   aria-label="Connect on LinkedIn">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    <span class="sr-only">LinkedIn</span>
-                </a>
-                <a href="https://github.com/arjunsurendran24" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   itemprop="sameAs"
-                   aria-label="View GitHub profile">
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                    <span class="sr-only">GitHub</span>
-                </a>
             </div>
         </section>
 
+        <!-- About / Highlights Section (Optional, effectively merged with Hero but we can add more if needed) -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card-custom text-center">
+                            <h2 class="mb-4">Let's Connect</h2>
+                            <p class="mb-4 text-muted">Have a question or want to work together? Drop me a message!</p>
+                            
+                            <form action="https://formspree.io/f/xpzvqjzl" method="POST" class="text-start">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary-custom">Send Message</button>
+                                </div>
+                            </form>
+                            <!-- Note: Replace the form action with your own Formspree ID or backend handler -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2024 Arjun Surendran. All rights reserved.</p>
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0 text-muted">© 2025 Arjun Surendran. All rights reserved.</p>
+        </div>
     </footer>
 
-    <!-- Modern JavaScript Module -->
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Theme Toggle Script -->
     <script type="module" src="js/theme-toggle.js"></script>
 </body>
 

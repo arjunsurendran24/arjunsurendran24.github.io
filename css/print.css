@@ -1,0 +1,146 @@
+@media print {
+    @page {
+        margin: 0.5in;
+        size: letter;
+    }
+
+    /* Reset Bootstrap & Layout */
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 11pt !important;
+        padding-top: 0 !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Hide Non-Print Elements */
+    header, 
+    nav, 
+    .navbar, 
+    footer, 
+    .btn, 
+    .d-print-none,
+    #theme-toggle,
+    .hero-section,
+    #contact,
+    #faq,
+    .breadcrumb {
+        display: none !important;
+    }
+
+    /* Resume Specifics Override */
+    main {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    #about {
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
+    }
+
+    #about h1 {
+        font-size: 24pt !important;
+        color: black !important;
+        background: none !important;
+        -webkit-text-fill-color: black !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .print-contact {
+        display: block !important;
+        font-size: 10pt !important;
+        color: #333 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .print-contact p {
+        margin: 0 !important;
+    }
+
+    p.lead {
+        font-size: 11pt !important;
+        color: black !important;
+    }
+
+    /* Experience Section */
+    .experience-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 1.5rem !important;
+        padding-left: 1.5rem !important;
+        border-left: 2px solid #ccc !important;
+    }
+
+    .experience-item::before {
+        border-color: #666 !important;
+        background: white !important;
+    }
+
+    .experience-item h3, 
+    .experience-item h3 span {
+        font-size: 12pt !important;
+        color: black !important;
+        font-weight: bold !important;
+    }
+
+    .experience-item .text-muted {
+        color: #444 !important;
+    }
+
+    /* Grid Layout for Resume Content */
+    .row {
+        display: block !important; /* Stack columns by default unless we float */
+    }
+    
+    .col-lg-8 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .col-lg-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-top: 2rem !important;
+        page-break-before: avoid; /* Or always, depending on preference */
+    }
+
+    /* Skills */
+    .skills-badge {
+        border: 1px solid #ccc !important;
+        background: white !important;
+        color: black !important;
+        font-size: 9pt !important;
+        padding: 0.2rem 0.5rem !important;
+    }
+
+    /* Links */
+    a {
+        text-decoration: none !important;
+        color: black !important;
+    }
+    
+    /* Ensure links are not invisible */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 80%;
+        color: #555;
+        display: none; /* Optional: hide URLs to keep it clean, or block to show */
+    }
+
+    /* Remove shadows/cards */
+    .card-custom {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        background: none !important;
+    }
+}
