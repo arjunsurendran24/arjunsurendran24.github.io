@@ -1,229 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Arjun Surendran - Software Engineer with passion for machine learning and systems engineering. Explore my portfolio and resume.">
-    <meta name="keywords" content="Arjun Surendran, Software Engineer, Machine Learning, AI, Portfolio, Resume, ML Frameworks, Python, C++, Mojo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Arjun Surendran is a software engineer focused on machine learning frameworks, AI systems, and compiler-driven model execution.">
+    <meta name="keywords" content="Arjun Surendran, Software Engineer, Machine Learning, AI, MLIR, C++, Python, Resume, Portfolio">
     <meta name="author" content="Arjun Surendran">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow">
-    <meta name="theme-color" content="#667eea">
-    
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none';">
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+    <meta name="googlebot" content="index,follow">
+    <meta name="theme-color" content="#1d8a7a">
+    <meta name="theme-color" content="#1d8a7a" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#17252d" media="(prefers-color-scheme: dark)">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-    
-    <!-- Open Graph Protocol -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Arjun Surendran - Software Engineer Portfolio">
-    <meta property="og:description" content="Software Engineer specializing in machine learning frameworks, AI development, and systems engineering. View my professional portfolio and resume.">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Arjun Surendran | Software Engineer">
+    <meta property="og:description" content="Portfolio and resume of Arjun Surendran, software engineer working on ML frameworks and AI systems.">
     <meta property="og:url" content="https://arjunsurendran.dev/">
-    <meta property="og:site_name" content="Arjun Surendran Portfolio">
-    <meta property="og:image" content="https://arjunsurendran.dev/assets/images/photo.jpg">
-    <meta property="og:image:alt" content="Arjun Surendran - Software Engineer">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Arjun Surendran">
+    <meta property="og:image" content="https://arjunsurendran.dev/assets/images/preview.svg">
+    <meta property="og:image:alt" content="Arjun Surendran portfolio preview graphic">
     <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card -->
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Arjun Surendran - Software Engineer Portfolio">
-    <meta name="twitter:description" content="Software Engineer specializing in machine learning frameworks, AI development, and systems engineering.">
-    <meta name="twitter:image" content="https://arjunsurendran.dev/assets/images/photo.jpg">
-    <meta name="twitter:image:alt" content="Arjun Surendran - Software Engineer">
+    <meta name="twitter:title" content="Arjun Surendran | Software Engineer">
+    <meta name="twitter:description" content="Portfolio and resume of Arjun Surendran, software engineer working on ML frameworks and AI systems.">
+    <meta name="twitter:image" content="https://arjunsurendran.dev/assets/images/preview.svg">
     <meta name="twitter:creator" content="@arjunsurendran">
-    
-    <!-- LinkedIn and Professional Networks -->
-    <meta property="profile:first_name" content="Arjun">
-    <meta property="profile:last_name" content="Surendran">
-    <meta property="profile:username" content="arjunsurendran24">
-    
-    <!-- Canonical URL -->
+
     <link rel="canonical" href="https://arjunsurendran.dev/">
-    
-    <!-- Alternate links for internationalization -->
     <link rel="alternate" hreflang="en" href="https://arjunsurendran.dev/">
     <link rel="alternate" hreflang="x-default" href="https://arjunsurendran.dev/">
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-    
-    <!-- Fonts -->
+    <link rel="alternate" type="application/json" title="Machine-readable resume" href="https://arjunsurendran.dev/resume/resume.json">
+    <link rel="alternate" type="text/plain" title="LLMs index" href="https://arjunsurendran.dev/llms.txt">
+    <link rel="me" href="https://linkedin.com/in/arjunsurendran24">
+    <link rel="me" href="https://github.com/arjunsurendran24">
+
+    <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    
-    <title>Arjun Surendran - Software Engineer Portfolio</title>
-    
-    <!-- JSON-LD Structured Data -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Arjun Surendran | Software Engineer</title>
+
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@graph": [
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://arjunsurendran.dev/#person",
+          "name": "Arjun Surendran",
+          "givenName": "Arjun",
+          "familyName": "Surendran",
+          "jobTitle": "Software Engineer",
+          "description": "Software Engineer with expertise in machine learning frameworks, AI development, and systems engineering",
+          "url": "https://arjunsurendran.dev/",
+          "image": "https://arjunsurendran.dev/assets/images/preview.svg",
+          "email": "contact@arjunsurendran.dev",
+          "sameAs": [
+            "https://linkedin.com/in/arjunsurendran24",
+            "https://github.com/arjunsurendran24"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Microsoft",
+            "url": "https://www.microsoft.com"
+          },
+          "alumniOf": [
             {
-                "@type": "Person",
-                "@id": "https://arjunsurendran.dev/#person",
-                "name": "Arjun Surendran",
-                "givenName": "Arjun",
-                "familyName": "Surendran",
-                "jobTitle": "Software Engineer",
-                "description": "Software Engineer with expertise in machine learning frameworks, AI development, and systems engineering",
-                "url": "https://arjunsurendran.dev/",
-                "image": {
-                    "@type": "ImageObject",
-                    "url": "https://arjunsurendran.dev/assets/images/photo.jpg",
-                    "width": 400,
-                    "height": 400
-                },
-                "email": "contact@arjunsurendran.dev",
-                "sameAs": [
-                    "https://linkedin.com/in/arjunsurendran24",
-                    "https://github.com/arjunsurendran24"
-                ],
-                "worksFor": {
-                    "@type": "Organization",
-                    "name": "Microsoft",
-                    "url": "https://www.microsoft.com"
-                },
-                "alumniOf": [
-                    {
-                        "@type": "CollegeOrUniversity",
-                        "name": "University of Southern California",
-                        "url": "https://www.usc.edu"
-                    },
-                    {
-                        "@type": "CollegeOrUniversity",
-                        "name": "Mahatma Gandhi University",
-                        "url": "https://www.mgu.ac.in"
-                    }
-                ],
-                "knowsAbout": [
-                    "Machine Learning",
-                    "Artificial Intelligence",
-                    "Python Programming",
-                    "C++ Programming", 
-                    "Mojo Programming Language",
-                    "ML Frameworks",
-                    "Systems Engineering",
-                    "Compiler Development"
-                ],
-                "hasOccupation": {
-                    "@type": "Occupation",
-                    "name": "Software Engineer",
-                    "occupationLocation": {
-                        "@type": "Place",
-                        "name": "Seattle, WA"
-                    },
-                    "skills": "Machine Learning, AI Frameworks, Python, C++, Mojo, Systems Engineering"
-                }
+              "@type": "CollegeOrUniversity",
+              "name": "University of Southern California",
+              "url": "https://www.usc.edu"
             },
             {
-                "@type": "WebSite",
-                "@id": "https://arjunsurendran.dev/#website",
-                "url": "https://arjunsurendran.dev/",
-                "name": "Arjun Surendran Portfolio",
-                "description": "Professional portfolio and resume of Arjun Surendran, Software Engineer specializing in machine learning and AI frameworks",
-                "publisher": {
-                    "@id": "https://arjunsurendran.dev/#person"
-                },
-                "inLanguage": "en-US",
-                "copyrightYear": 2024,
-                "copyrightHolder": {
-                    "@id": "https://arjunsurendran.dev/#person"
-                }
+              "@type": "CollegeOrUniversity",
+              "name": "Mahatma Gandhi University",
+              "url": "https://www.mgu.ac.in"
             }
-        ]
+          ],
+          "knowsAbout": [
+            "Machine Learning",
+            "Artificial Intelligence",
+            "Python",
+            "C++",
+            "Mojo",
+            "MLIR",
+            "Graph Compilers"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://arjunsurendran.dev/#website",
+          "url": "https://arjunsurendran.dev/",
+          "name": "Arjun Surendran Portfolio",
+          "publisher": {
+            "@id": "https://arjunsurendran.dev/#person"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://arjunsurendran.dev/#webpage",
+          "url": "https://arjunsurendran.dev/",
+          "name": "Arjun Surendran | Software Engineer",
+          "isPartOf": {
+            "@id": "https://arjunsurendran.dev/#website"
+          },
+          "about": {
+            "@id": "https://arjunsurendran.dev/#person"
+          },
+          "mainEntity": {
+            "@id": "https://arjunsurendran.dev/#person"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://arjunsurendran.dev/assets/images/preview.svg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      ]
     }
     </script>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Arjun Surendran</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="resume/index.html">Resume</a>
-                        </li>
-                        <li class="nav-item">
-                            <button id="theme-toggle" class="btn nav-link border-0" aria-label="Toggle dark mode">
-                                <i class="fas fa-moon" id="theme-icon"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="/">Arjun Surendran</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="/" aria-current="page">Home</a></li>
+                    <li><a class="nav-link" href="/resume/">Resume</a></li>
+                    <li>
+                        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+                            <span id="theme-icon" class="theme-icon" aria-hidden="true">T</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main role="main">
-        <!-- Hero Section -->
-        <section class="hero-section d-flex align-items-center">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-8 mx-auto text-center" itemscope itemtype="https://schema.org/Person">
-                        <h1 class="hero-title mb-4">
-                            Hello, I'm <span itemprop="name">Arjun Surendran</span>
-                        </h1>
-
-                        <p class="mb-5">
-                            Software Engineer with expertise in <span itemprop="knowsAbout">C++</span>, <span itemprop="knowsAbout">Python</span>, <span itemprop="knowsAbout">MLIR</span> and <span itemprop="knowsAbout">Graph Compilers</span>.
-                        </p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <a href="resume/index.html" class="btn btn-primary-custom">
-                                <i class="fas fa-file-alt me-2"></i> View Resume
-                            </a>
+    <main id="main-content" class="page-main">
+        <div class="container">
+            <section class="surface hero" aria-labelledby="hero-title" data-animate="1">
+                <div class="hero-grid">
+                    <div>
+                        <p class="hero-kicker">Machine Learning Systems Engineer</p>
+                        <h1 id="hero-title" class="hero-title">Hello, I am <span class="accent">Arjun Surendran</span>.</h1>
+                        <p class="hero-subtitle">Software Engineer with expertise in C++, Python, MLIR and Graph Compilers.</p>
+                        <div class="button-row">
+                            <a class="button button-primary" href="/resume/">View Resume</a>
+                            <a class="button button-secondary" href="mailto:contact@arjunsurendran.dev">Contact</a>
                         </div>
-                        
-                        <div class="mt-5 social-links">
-                            <a href="https://linkedin.com/in/arjunsurendran24" target="_blank" rel="noopener noreferrer" class="fs-2 me-4 hover-primary" style="color: var(--text-color)">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/arjunsurendran24" target="_blank" rel="noopener noreferrer" class="fs-2 hover-primary" style="color: var(--text-color)">
-                                <i class="fab fa-github"></i>
-                            </a>
+                        <div class="social-row" aria-label="Social profiles">
+                            <a class="social-link" href="https://linkedin.com/in/arjunsurendran24" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
+                            <a class="social-link" href="https://github.com/arjunsurendran24" target="_blank" rel="noopener noreferrer me">GitHub</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <section class="section-stack" aria-label="Highlights" data-animate="2">
+                <div class="feature-grid">
+                    <article class="section-card feature-card">
+                        <h2>Framework Engineering</h2>
+                        <p>Designing model execution APIs and runtime integration paths for efficient AI workflows.</p>
+                    </article>
+                    <article class="section-card feature-card">
+                        <h2>Compiler and MLIR</h2>
+                        <p>Building compilation and optimization pipelines that improve model performance and portability.</p>
+                    </article>
+                    <article class="section-card feature-card">
+                        <h2>Cross-Platform Inference</h2>
+                        <p>Delivering on-device ML systems across macOS, Windows, Linux, iOS, and Android.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-stack" aria-label="Machine-readable resources" data-animate="3">
+                <article class="section-card">
+                    <h2 class="section-title">Agent and Search Discoverability</h2>
+                    <p class="text-muted">Machine-readable resources are published for indexing, assistants, and automated retrieval.</p>
+                    <div class="button-row">
+                        <a class="button button-secondary" href="/llms.txt">llms.txt</a>
+                        <a class="button button-secondary" href="/llms-full.txt">llms-full.txt</a>
+                        <a class="button button-secondary" href="/resume/resume.json">resume.json</a>
+                        <a class="button button-secondary" href="/sitemap.xml">sitemap.xml</a>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
 
-    <footer class="text-center">
+    <footer class="footer">
         <div class="container">
-            <p class="mb-0 text-muted">© 2025 Arjun Surendran. All rights reserved.</p>
+            <p>(c) 2026 Arjun Surendran. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <!-- Theme Toggle Script -->
-    <script type="module" src="js/theme-toggle.js"></script>
+    <script src="js/theme-toggle.js" defer></script>
 </body>
-
 </html>

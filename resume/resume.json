@@ -1,0 +1,111 @@
+{
+  "name": "Arjun Surendran",
+  "title": "Senior Software Engineer",
+  "summary": "Software Engineer with expertise in designing and implementing ML frameworks, model execution, and optimization. I enjoy working on cutting-edge technologies in AI and ML and have experience working across various platforms like MacOS, Windows, Linux, iOS, and Android.",
+  "contact": {
+    "email": "contact@arjunsurendran.dev",
+    "linkedin": "https://linkedin.com/in/arjunsurendran24",
+    "github": "https://github.com/arjunsurendran24"
+  },
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Microsoft",
+      "start": "2024-10",
+      "end": null,
+      "displayDate": "Oct 2024 - Present",
+      "highlights": [
+        "Working on ML compiler."
+      ]
+    },
+    {
+      "title": "Software Engineer - AI frameworks",
+      "company": "Modular",
+      "start": "2022-05",
+      "end": "2024-09",
+      "displayDate": "May 2022 - Sept 2024",
+      "highlights": [
+        "Designed framework APIs for model execution in C, C++, and Python.",
+        "Developed model compilation and execution pipelines with MLIR, C++, Mojo and Python"
+      ]
+    },
+    {
+      "title": "Software Engineer - On-Device Machine Learning",
+      "company": "Adobe",
+      "start": "2020-02",
+      "end": "2022-04",
+      "displayDate": "Feb 2020 - Apr 2022",
+      "highlights": [
+        "Developed unified APIs for On-Device ML Inference in C++ across multiple platforms (MacOS, Windows, Linux, iOS, and Android).",
+        "Benchmarked and optimized models for faster inference and reduced memory consumption.",
+        "Deployed models over the air using On-Demand Model Download APIs."
+      ]
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "The Mathworks",
+      "start": "2019-09",
+      "end": "2019-12",
+      "displayDate": "Sept 2019 - Dec 2019",
+      "highlights": [
+        "Performed ML Quantization in C++ to reduce model size by 75% with minimal accuracy loss."
+      ]
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "Lyft Inc.",
+      "start": "2019-05",
+      "end": "2019-08",
+      "displayDate": "May 2019 - Aug 2019",
+      "highlights": [
+        "Applied computer vision techniques for scene understanding and automatic detection."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "ML Framework Development",
+      "description": "Part of the team that developed a new framework for efficient AI model execution at Modular."
+    },
+    {
+      "name": "On-Device ML Inference",
+      "description": "Developed APIs and tools for machine learning inference across multiple platforms at Adobe."
+    }
+  ],
+  "skills": {
+    "programmingLanguages": ["Python", "C++", "C", "Mojo"],
+    "frameworksAndTools": ["TensorFlow", "PyTorch", "MLIR", "ONNXRuntime"]
+  },
+  "education": [
+    {
+      "institution": "University of Southern California",
+      "degree": "Master of Science in Electrical Engineering",
+      "graduation": "2019-12",
+      "displayDate": "Dec 2019"
+    },
+    {
+      "institution": "Mahatma Gandhi University, India",
+      "degree": "Bachelor of Technology in Electrical & Electronics Engineering",
+      "graduation": "2014-05",
+      "displayDate": "May 2014"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What programming languages does Arjun specialize in?",
+      "answer": "Arjun specializes in Python, C++, C, and Mojo for AI/ML development, with extensive experience in frameworks like TensorFlow, PyTorch, and MLIR."
+    },
+    {
+      "question": "What is Arjun's experience with machine learning frameworks?",
+      "answer": "Arjun has deep experience designing and implementing ML frameworks, working on model execution pipelines, compiler development, and cross-platform inference optimization at companies like Microsoft, Modular, and Adobe."
+    },
+    {
+      "question": "What platforms has Arjun worked with for ML deployment?",
+      "answer": "Arjun has experience with MacOS, Windows, Linux, iOS, and Android platforms, specializing in on-device ML inference and cross-platform API development."
+    },
+    {
+      "question": "What is Arjun's educational background?",
+      "answer": "Arjun holds a Master of Science in Electrical Engineering from USC (2019) and a Bachelor of Technology in Electrical & Electronics Engineering from Mahatma Gandhi University (2014)."
+    }
+  ]
+}

@@ -1,146 +1,252 @@
 @media print {
     @page {
-        margin: 0.5in;
         size: letter;
+        margin: 0.5in;
     }
 
-    /* Reset Bootstrap & Layout */
+    html,
     body {
-        background: white !important;
-        color: black !important;
-        font-size: 11pt !important;
-        padding-top: 0 !important;
-    }
-    
-    .container {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
+        background: #ffffff !important;
+        color: #111111 !important;
+        font-family: "Calibri", "Arial", sans-serif !important;
+        font-size: 10pt !important;
+        line-height: 1.35 !important;
     }
 
-    /* Hide Non-Print Elements */
-    header, 
-    nav, 
-    .navbar, 
-    footer, 
-    .btn, 
+    body::before,
+    body::after,
+    .site-header,
+    .footer,
     .d-print-none,
+    .theme-toggle,
     #theme-toggle,
-    .hero-section,
-    #contact,
-    #faq,
-    .breadcrumb {
+    .skip-link {
         display: none !important;
     }
 
-    /* Resume Specifics Override */
-    main {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .page-main {
+        padding: 0 !important;
+    }
+
+    .surface,
+    .section-card,
+    .timeline-item,
+    .info-item,
+    .project-item,
+    .faq-item {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     #about {
-        margin-bottom: 1.5rem !important;
+        margin: 0 0 0.55rem !important;
+        padding-bottom: 0.4rem !important;
+        border-bottom: 1px solid #111 !important;
         text-align: center !important;
     }
 
     #about h1 {
         font-size: 24pt !important;
-        color: black !important;
-        background: none !important;
-        -webkit-text-fill-color: black !important;
-        margin-bottom: 0.5rem !important;
+        font-weight: 700 !important;
+        margin: 0 0 0.2rem !important;
+        line-height: 1.05 !important;
+        letter-spacing: 0.01em;
+        color: #000000 !important;
+        text-align: center !important;
     }
 
     .print-contact {
         display: block !important;
-        font-size: 10pt !important;
-        color: #333 !important;
-        margin-bottom: 1rem !important;
+        margin: 0 0 0.25rem !important;
+        color: #222 !important;
+        font-size: 9.2pt !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
     }
 
-    .print-contact p {
+    .hero-subtitle {
+        display: none !important;
+    }
+
+    .resume-grid {
+        display: grid !important;
+        grid-template-columns: 2.15fr 1fr;
+        gap: 0.26in;
         margin: 0 !important;
     }
 
-    p.lead {
-        font-size: 11pt !important;
-        color: black !important;
+    .section-stack,
+    .experience-list,
+    .projects-list,
+    .details-list,
+    .info-list {
+        display: block !important;
+        margin: 0 !important;
     }
 
-    /* Experience Section */
-    .experience-item {
+    .section-card {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .section-title {
+        margin: 0 0 0.24rem !important;
+        padding: 0 0 0.08rem !important;
+        border-bottom: 1px solid #8e8e8e !important;
+        font-size: 10.6pt !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.06em !important;
+        color: #111 !important;
+    }
+
+    .timeline-item,
+    .project-item,
+    .info-item {
+        margin: 0 0 0.34rem !important;
         break-inside: avoid;
         page-break-inside: avoid;
-        margin-bottom: 1.5rem !important;
-        padding-left: 1.5rem !important;
-        border-left: 2px solid #ccc !important;
     }
 
-    .experience-item::before {
-        border-color: #666 !important;
-        background: white !important;
+    .item-head {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+        gap: 0.35rem;
+        margin: 0 0 0.08rem !important;
     }
 
-    .experience-item h3, 
-    .experience-item h3 span {
-        font-size: 12pt !important;
-        color: black !important;
-        font-weight: bold !important;
+    .item-title {
+        font-size: 10.4pt !important;
+        font-weight: 700 !important;
+        color: #111 !important;
+        line-height: 1.2 !important;
     }
 
-    .experience-item .text-muted {
-        color: #444 !important;
+    .item-org {
+        margin: 0 !important;
+        font-size: 9.8pt !important;
+        font-weight: 600 !important;
+        color: #222 !important;
     }
 
-    /* Grid Layout for Resume Content */
-    .row {
-        display: block !important; /* Stack columns by default unless we float */
-    }
-    
-    .col-lg-8 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .col-lg-4 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        margin-top: 2rem !important;
-        page-break-before: avoid; /* Or always, depending on preference */
-    }
-
-    /* Skills */
-    .skills-badge {
-        border: 1px solid #ccc !important;
-        background: white !important;
-        color: black !important;
+    .item-date {
+        margin: 0 !important;
         font-size: 9pt !important;
-        padding: 0.2rem 0.5rem !important;
+        color: #444 !important;
+        white-space: nowrap !important;
     }
 
-    /* Links */
-    a {
-        text-decoration: none !important;
-        color: black !important;
-    }
-    
-    /* Ensure links are not invisible */
-    a[href]:after {
-        content: " (" attr(href) ")";
-        font-size: 80%;
-        color: #555;
-        display: none; /* Optional: hide URLs to keep it clean, or block to show */
-    }
-
-    /* Remove shadows/cards */
-    .card-custom {
-        box-shadow: none !important;
-        border: none !important;
+    .item-list {
+        margin: 0.1rem 0 0 1rem !important;
         padding: 0 !important;
-        background: none !important;
+    }
+
+    .item-list li {
+        margin: 0 0 0.12rem !important;
+        color: #181818 !important;
+    }
+
+    .project-item {
+        border-left: none !important;
+        padding-left: 0 !important;
+    }
+
+    .project-item p {
+        margin: 0 !important;
+    }
+
+    .subhead {
+        margin: 0.06rem 0 0.12rem !important;
+        color: #222 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        font-size: 8.8pt !important;
+        font-weight: 700 !important;
+    }
+
+    .skill-cloud {
+        display: block !important;
+        margin: 0 0 0.22rem !important;
+    }
+
+    .skill-chip {
+        display: inline !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
+        color: #1a1a1a !important;
+        font-size: 9.3pt !important;
+        font-weight: 400 !important;
+    }
+
+    .skill-chip::after {
+        content: ", ";
+    }
+
+    .skill-cloud .skill-chip:last-child::after {
+        content: "";
+    }
+
+    .info-item h3 {
+        margin: 0 0 0.03rem !important;
+        font-size: 9.9pt !important;
+        font-weight: 700 !important;
+        color: #111 !important;
+    }
+
+    .info-item p,
+    .info-item time {
+        margin: 0 !important;
+        color: #333 !important;
+        font-size: 9.2pt !important;
+    }
+
+    .connect-list {
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+
+    .connect-list li {
+        margin: 0 0 0.07rem !important;
+    }
+
+    .connect-list a {
+        color: #111 !important;
+        text-decoration: none !important;
+        font-size: 9.2pt !important;
+    }
+
+    .connect-dot {
+        display: none !important;
+    }
+
+    #projects {
+        display: none !important;
+    }
+
+    a {
+        color: #111 !important;
+        text-decoration: none !important;
+    }
+
+    h2,
+    h3,
+    p,
+    li {
+        orphans: 3;
+        widows: 3;
     }
 }

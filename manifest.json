@@ -1,94 +1,53 @@
 {
+  "id": "/",
   "name": "Arjun Surendran - Software Engineer Portfolio",
-  "short_name": "Arjun Portfolio",
-  "description": "Professional portfolio and resume of Arjun Surendran, Software Engineer specializing in machine learning frameworks and AI development",
+  "short_name": "Arjun Resume",
+  "description": "Professional portfolio and resume of Arjun Surendran, Software Engineer specializing in machine learning frameworks and AI development.",
   "start_url": "/",
-  "display": "standalone",
-  "background_color": "#667eea",
-  "theme_color": "#667eea",
-  "orientation": "portrait-primary",
   "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait-primary",
   "lang": "en-US",
   "dir": "ltr",
+  "theme_color": "#1d8a7a",
+  "background_color": "#eef4f3",
   "categories": ["portfolio", "resume", "professional", "software-engineer", "machine-learning"],
-  "screenshots": [
-    {
-      "src": "/assets/images/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Homepage of Arjun Surendran's portfolio"
-    },
-    {
-      "src": "/assets/images/screenshot-narrow.png", 
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Mobile view of the portfolio"
-    }
-  ],
   "icons": [
     {
-      "src": "/assets/images/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
+      "src": "/assets/images/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/assets/images/icon-512.png",
-      "sizes": "512x512", 
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/assets/images/icon-180.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/assets/images/favicon.ico",
-      "sizes": "48x48",
-      "type": "image/x-icon"
     }
   ],
   "shortcuts": [
     {
       "name": "View Resume",
       "short_name": "Resume",
-      "description": "View Arjun's detailed professional resume",
+      "description": "View Arjun Surendran's detailed professional resume.",
       "url": "/resume/",
       "icons": [
         {
-          "src": "/assets/images/resume-icon-192.png",
-          "sizes": "192x192"
+          "src": "/assets/images/icon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
         }
       ]
     },
     {
-      "name": "Contact Info",
+      "name": "Contact",
       "short_name": "Contact",
-      "description": "Get in touch with Arjun",
-      "url": "/resume/#contact",
+      "description": "Contact Arjun Surendran by email.",
+      "url": "/resume/#contact-info",
       "icons": [
         {
-          "src": "/assets/images/contact-icon-192.png", 
-          "sizes": "192x192"
+          "src": "/assets/images/icon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
         }
       ]
     }
   ],
-  "related_applications": [
-    {
-      "platform": "web",
-      "url": "https://arjunsurendran24.github.io/web-resume/"
-    }
-  ],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "focus-existing"
-  }
+  "prefer_related_applications": false
 }

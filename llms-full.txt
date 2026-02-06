@@ -1,0 +1,46 @@
+# Arjun Surendran - Assistant Context
+
+## Identity
+- Name: Arjun Surendran
+- Role: Software Engineer
+- Focus: ML frameworks, compiler workflows, model execution pipelines, and cross-platform inference.
+- Website: https://arjunsurendran.dev/
+- Resume page: https://arjunsurendran.dev/resume/
+- Resume JSON: https://arjunsurendran.dev/resume/resume.json
+- Email: contact@arjunsurendran.dev
+- LinkedIn: https://linkedin.com/in/arjunsurendran24
+- GitHub: https://github.com/arjunsurendran24
+
+## Professional Summary
+Software Engineer with expertise in designing and implementing ML frameworks, model execution, and optimization. Experience spans macOS, Windows, Linux, iOS, and Android platforms.
+
+## Experience
+1. Senior Software Engineer, Microsoft (Oct 2024 - Present)
+- Working on ML compiler.
+
+2. Software Engineer - AI frameworks, Modular (May 2022 - Sept 2024)
+- Designed framework APIs for model execution in C, C++, and Python.
+- Developed model compilation and execution pipelines with MLIR, C++, Mojo and Python.
+
+3. Software Engineer - On-Device Machine Learning, Adobe (Feb 2020 - Apr 2022)
+- Developed unified APIs for On-Device ML Inference in C++ across multiple platforms (MacOS, Windows, Linux, iOS, and Android).
+- Benchmarked and optimized models for faster inference and reduced memory consumption.
+- Deployed models over the air using On-Demand Model Download APIs.
+
+4. Software Engineer Intern, The Mathworks (Sept 2019 - Dec 2019)
+- Performed ML Quantization in C++ to reduce model size by 75% with minimal accuracy loss.
+
+5. Software Engineer Intern, Lyft Inc. (May 2019 - Aug 2019)
+- Applied computer vision techniques for scene understanding and automatic detection.
+
+## Projects
+- ML Framework Development: Part of the team that developed a new framework for efficient AI model execution at Modular.
+- On-Device ML Inference: Developed APIs and tools for machine learning inference across multiple platforms at Adobe.
+
+## Skills
+- Languages: Python, C++, C, Mojo
+- Frameworks and tools: TensorFlow, PyTorch, MLIR, ONNXRuntime
+
+## Education
+- Master of Science in Electrical Engineering, University of Southern California (Dec 2019)
+- Bachelor of Technology in Electrical & Electronics Engineering, Mahatma Gandhi University, India (May 2014)

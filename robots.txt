@@ -1,41 +1,24 @@
-# Robots.txt for Arjun Surendran Portfolio
-# Optimized for search engine visibility
+# robots.txt for https://arjunsurendran.dev/
 
 User-agent: *
 Allow: /
-Allow: /resume/
-Allow: /assets/
-Allow: /*.css
-Allow: /*.js
-Allow: /*.jpg
-Allow: /*.png
-Allow: /*.webp
-Allow: /*.svg
-
-# Disallow unnecessary files
 Disallow: /CLAUDE.md
 Disallow: /.git/
-Disallow: /_config.yml
-Disallow: /CNAME
 
-# Special instructions for major search engines
-User-agent: Googlebot
+# AI assistants and search agents
+User-agent: GPTBot
 Allow: /
-Crawl-delay: 1
 
-User-agent: Bingbot
+User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 2
 
-User-agent: Slurp
+User-agent: ClaudeBot
 Allow: /
-Crawl-delay: 3
 
-# Sitemap location
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://arjunsurendran.dev/sitemap.xml
-
-# Host (canonical URL)
-Host: https://arjunsurendran.dev
-
-# Clean URLs preference
-Clean-param: utm_source&utm_medium&utm_campaign
