@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Arjun Surendran monogram icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#1d8a7a"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#f3f7f6" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#db6f2f" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="174" fill="none" stroke="url(#ring)" stroke-width="26"/>
+  <text x="256" y="286" text-anchor="middle" font-family="Sora, Manrope, Arial, sans-serif" font-size="140" font-weight="700" fill="#f3f7f6" letter-spacing="4">AS</text>
+</svg>

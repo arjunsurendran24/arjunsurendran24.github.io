@@ -1,0 +1,16 @@
+# Arjun Surendran Portfolio
+
+Canonical site: https://arjunsurendran.dev/
+Primary resume page: https://arjunsurendran.dev/resume/
+Machine-readable resume: https://arjunsurendran.dev/resume/resume.json
+Expanded context for assistants: https://arjunsurendran.dev/llms-full.txt
+
+## Summary
+Arjun Surendran is a software engineer focused on machine learning frameworks, compiler pipelines, and cross-platform inference systems.
+
+## Key links
+- Home: https://arjunsurendran.dev/
+- Resume: https://arjunsurendran.dev/resume/
+- LinkedIn: https://linkedin.com/in/arjunsurendran24
+- GitHub: https://github.com/arjunsurendran24
+- Contact: mailto:contact@arjunsurendran.dev
