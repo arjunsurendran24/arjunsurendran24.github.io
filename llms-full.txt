@@ -14,6 +14,8 @@
 ## Professional Summary
 Software Engineer with expertise in designing and implementing ML frameworks, model execution, and optimization. Experience spans macOS, Windows, Linux, iOS, and Android platforms.
 
+Last updated: 2026-02-09
+
 ## Experience
 1. Senior Software Engineer, Microsoft (Oct 2024 - Present)
 - Working on ML compiler.

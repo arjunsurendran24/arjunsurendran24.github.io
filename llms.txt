@@ -14,3 +14,5 @@ Arjun Surendran is a software engineer focused on machine learning frameworks, c
 - LinkedIn: https://linkedin.com/in/arjunsurendran24
 - GitHub: https://github.com/arjunsurendran24
 - Contact: mailto:contact@arjunsurendran.dev
+
+Last updated: 2026-02-09
