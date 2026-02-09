@@ -19,3 +19,7 @@ __pycache__/
 venv/
 dist/
 *.egg-info/
+
+.codex
+.claude
+.gemini
