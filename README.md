@@ -16,6 +16,7 @@ Static portfolio and resume site for Arjun Surendran.
 - JSON-LD structured data on homepage and resume pages.
 - `sitemap.xml`, `robots.txt`, and canonical links.
 - PWA manifest and service worker for caching core resources.
+- Readability and accessibility tuned for text-heavy content across screen sizes.
 
 ## Local Preview
 Serve the directory with any static server (for example, `python3 -m http.server`).
