@@ -1,29 +1,40 @@
 # web-resume Development Guidelines
 
-Auto-generated from all feature plans. Last updated: 2026-02-08
+Last updated: 2026-02-21
 
 ## Active Technologies
 
-- HTML5, CSS3, JavaScript (ES2015+) + None (static site assets only) (001-readability-seo-discovery)
+- HTML5, CSS3, JavaScript (ES2015+) - Static site architecture
+- PWA (Service Worker)
 
 ## Project Structure
 
 ```text
-src/
-tests/
+/ (Root)
+├── css/ (Stylesheets)
+├── js/ (Scripts)
+├── resume/ (Resume page)
+├── assets/ (Images and icons)
+└── specs/ (Feature specifications)
 ```
 
-## Commands
+## Maintenance
 
-npm test && npm run lint
+- Ensure all pages are listed in `sitemap.xml`, `llms.txt`, and `llms-full.txt`.
+- Keep JSON-LD structured data in sync with content.
+- Verify color contrast for accessibility (WCAG AA).
+- Maintain service worker cache versioning.
 
-## Code Style
+## UI Principles
 
-HTML5, CSS3, JavaScript (ES2015+): Follow standard conventions
+- Modern, professional, and accessible.
+- Glassmorphism and subtle gradients.
+- Bento-style layout for sections.
+- Responsive across all devices.
 
-## Recent Changes
+## Agent Discoverability
 
-- 001-readability-seo-discovery: Added HTML5, CSS3, JavaScript (ES2015+) + None (static site assets only)
-
-<!-- MANUAL ADDITIONS START -->
-<!-- MANUAL ADDITIONS END -->
+- robots.txt: Standard and AI crawler instructions.
+- sitemap.xml: All public pages and primary assets.
+- llms.txt / llms-full.txt: Context for LLM-based assistants.
+- resume.json: Machine-readable resume data (JSON Resume schema).

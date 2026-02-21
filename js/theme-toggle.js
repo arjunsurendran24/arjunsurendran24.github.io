@@ -16,7 +16,7 @@
     }
 
     function updateThemeMeta(theme) {
-        var color = theme === "dark" ? "#17252d" : "#1d8a7a";
+        var color = theme === "dark" ? "#020617" : "#0f766e";
         var metas = document.querySelectorAll('meta[name="theme-color"]');
         metas.forEach(function (meta) {
             if (!meta.media) {
