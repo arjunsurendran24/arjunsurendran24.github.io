@@ -1,4 +1,4 @@
-const CACHE_NAME = "arjun-portfolio-v5";
+const CACHE_NAME = "arjun-portfolio-v6";
 const EXCLUDE_PATHS = ["/sw.js"];
 const OFFLINE_URL = "/404.html";
 

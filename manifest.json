@@ -10,8 +10,8 @@
   "orientation": "portrait-primary",
   "lang": "en-US",
   "dir": "ltr",
-  "theme_color": "#1d8a7a",
-  "background_color": "#eef4f3",
+  "theme_color": "#0f766e",
+  "background_color": "#f8fafc",
   "categories": ["portfolio", "resume", "professional", "software-engineer", "machine-learning"],
   "icons": [
     {
